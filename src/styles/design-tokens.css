@@ -253,6 +253,16 @@
 }
 
 :root, [data-theme="light"] {
+  --brand-primary: #2B6E47;
+  --brand-primary-glow: rgba(43, 110, 71, 0.06);
+  --accent-violet: #5A7E5E;
+  --accent-indigo: #2E4839;
+  --accent-cyan: #2B6E47;
+  --accent-emerald: #1E6B3F;
+  --accent-amber: #B37A00;
+  --accent-rose: #D92644;
+  --accent-sky: #1D6480;
+
   --theme-bg: #FFFFFF;
   --theme-bg-secondary: #F4F9F6;
   --theme-bg-tertiary: #E8F1F2;
@@ -266,6 +276,16 @@
 }
 
 [data-theme="dark"], .dark {
+  --brand-primary: #B3EFB2;
+  --brand-primary-glow: rgba(179, 239, 178, 0.06);
+  --accent-violet: #7A9E7E;
+  --accent-indigo: #31493C;
+  --accent-cyan: #B3EFB2;
+  --accent-emerald: #B3EFB2;
+  --accent-amber: #F59E0B;
+  --accent-rose: #F43F5E;
+  --accent-sky: #38BDF8;
+
   --theme-bg: #001A23;
   --theme-bg-secondary: #05222D;
   --theme-bg-tertiary: #0B2A36;
@@ -280,6 +300,16 @@
 
 @media (prefers-color-scheme: dark) {
   :root:not([data-theme="light"]) {
+    --brand-primary: #B3EFB2;
+    --brand-primary-glow: rgba(179, 239, 178, 0.06);
+    --accent-violet: #7A9E7E;
+    --accent-indigo: #31493C;
+    --accent-cyan: #B3EFB2;
+    --accent-emerald: #B3EFB2;
+    --accent-amber: #F59E0B;
+    --accent-rose: #F43F5E;
+    --accent-sky: #38BDF8;
+
     --theme-bg: #001A23;
     --theme-bg-secondary: #05222D;
     --theme-bg-tertiary: #0B2A36;

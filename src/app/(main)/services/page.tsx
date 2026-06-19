@@ -2,7 +2,6 @@
 
 import { motion } from "framer-motion";
 import { SectionWrapper, SectionHeader } from "@/components/ui/section-wrapper";
-import { Card } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import {
   Code2,
@@ -140,30 +139,20 @@ export default function ServicesPage() {
               }`}
             >
               {/* Left Column: Visual description */}
-              <div className="flex-1 w-full">
+              <div className="flex-1 w-full group">
                 <div
-                  className="p-8 relative overflow-hidden"
-                  style={{
-                    background: "var(--theme-surface)",
-                    border: "1px solid var(--theme-border)",
-                    borderRadius: "var(--radius-2xl)",
-                    minHeight: "320px",
-                  }}
+                  className="w-16 h-16 rounded-2xl bg-[var(--theme-bg-secondary)] border border-[var(--theme-border)] flex items-center justify-center mb-6 transition-transform duration-500 group-hover:scale-105 group-hover:rotate-[2deg]"
+                  style={{ background: "var(--feature-card-icon-bg)" }}
                 >
-                  <div
-                    className="w-16 h-16 rounded-2xl bg-[var(--theme-bg-secondary)] flex items-center justify-center mb-6"
-                    style={{ background: "var(--feature-card-icon-bg)" }}
-                  >
-                    {service.icon}
-                  </div>
-                  <h2 className="text-2xl md:text-3xl font-bold mb-4">{service.title}</h2>
-                  <p className="text-[var(--theme-text-secondary)] leading-relaxed mb-6">
-                    {service.description}
-                  </p>
-                  <Button variant="primary" href="/get-quote">
-                    Request Quote <ArrowRight className="w-4 h-4 ml-1" />
-                  </Button>
+                  {service.icon}
                 </div>
+                <h2 className="text-2xl md:text-3xl font-bold mb-4 transition-colors duration-300 group-hover:text-[var(--brand-primary)]">{service.title}</h2>
+                <p className="text-[var(--theme-text-secondary)] leading-relaxed mb-6">
+                  {service.description}
+                </p>
+                <Button variant="primary" href="/get-quote">
+                  Request Quote <ArrowRight className="w-4 h-4 ml-1" />
+                </Button>
               </div>
 
               {/* Right Column: Benefits list */}
@@ -192,36 +181,35 @@ export default function ServicesPage() {
           title="Transparent engagement models"
           description="We align our business with yours. Choose the engagement structure that matches your scope and timeline."
         />
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-6" style={{ gap: "var(--grid-gap)" }}>
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-10">
           {pricingApproaches.map((model, idx) => (
             <motion.div
               key={model.title}
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
-              transition={{ delay: idx * 0.1 }}
+              transition={{ delay: idx * 0.08 }}
+              className="group flex flex-col justify-between border-t-2 border-[var(--theme-border)] pt-8 hover:border-[var(--brand-primary)] transition-colors duration-300"
             >
-              <Card className="h-full flex flex-col justify-between">
-                <div>
-                  <h3 className="text-xl font-bold mb-2">{model.title}</h3>
-                  <div className="text-3xl font-extrabold text-[var(--brand-primary)] mb-4">{model.price}</div>
-                  <p className="text-sm text-[var(--theme-text-secondary)] leading-relaxed mb-6">
-                    {model.description}
-                  </p>
-                  <div className="border-t border-[var(--theme-border-subtle)] my-4" />
-                  <ul className="space-y-3 mb-6">
-                    {model.features.map((f) => (
-                      <li key={f} className="flex items-center gap-2 text-xs text-[var(--theme-text-secondary)]">
-                        <span className="text-[var(--brand-primary)]">✓</span>
-                        {f}
-                      </li>
-                    ))}
-                  </ul>
-                </div>
-                <Button variant="secondary" fullWidth href="/get-quote">
-                  Choose model
-                </Button>
-              </Card>
+              <div>
+                <h3 className="text-xl font-bold mb-2 transition-colors duration-300 group-hover:text-[var(--brand-primary)]">{model.title}</h3>
+                <div className="text-3xl font-extrabold text-[var(--brand-primary)] mb-4">{model.price}</div>
+                <p className="text-sm leading-relaxed mb-6" style={{ color: "var(--theme-text-secondary)" }}>
+                  {model.description}
+                </p>
+                <div className="border-t border-[var(--theme-border-subtle)] my-4" />
+                <ul className="space-y-3 mb-6">
+                  {model.features.map((f) => (
+                    <li key={f} className="flex items-center gap-2 text-xs" style={{ color: "var(--theme-text-secondary)" }}>
+                      <span className="text-[var(--brand-primary)]">✓</span>
+                      {f}
+                    </li>
+                  ))}
+                </ul>
+              </div>
+              <Button variant="secondary" fullWidth href="/get-quote" className="group-hover:bg-[var(--brand-primary)] group-hover:text-white transition-colors duration-300">
+                Choose model
+              </Button>
             </motion.div>
           ))}
         </div>

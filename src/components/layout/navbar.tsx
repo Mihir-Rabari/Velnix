@@ -96,7 +96,7 @@ export function Navbar() {
                 background: "var(--gradient-brand)",
               }}
             >
-              <span className="text-white font-bold text-lg">V</span>
+              <span className="text-white font-bold text-lg" aria-hidden="true">V</span>
             </div>
             <span
               className="font-bold tracking-tight"
@@ -112,92 +112,95 @@ export function Navbar() {
 
           {/* Desktop Navigation */}
           <div className="hidden lg:flex items-center" style={{ gap: "var(--space-1)" }}>
-            {navigation.map((item) => (
-              <div
-                key={item.name}
-                className="relative"
-                onMouseEnter={() => item.children && setActiveDropdown(item.name)}
-                onMouseLeave={() => setActiveDropdown(null)}
-              >
-                <Link
-                  href={item.href}
-                  className={cn(
-                    "flex items-center gap-1 px-4 py-2 rounded-lg transition-colors relative",
-                    pathname === item.href
-                      ? "text-[var(--brand-primary)]"
-                      : "text-[var(--theme-text-secondary)] hover:text-[var(--theme-text-primary)]"
-                  )}
-                  style={{
-                    fontSize: "var(--navbar-link-font-size)",
-                    fontWeight: "var(--navbar-link-font-weight)",
-                    transition: "var(--navbar-transition)",
-                  }}
+            {navigation.map((item) => {
+              const isActive = pathname === item.href || (item.href !== "/" && pathname.startsWith(item.href));
+              return (
+                <div
+                  key={item.name}
+                  className="relative"
+                  onMouseEnter={() => item.children && setActiveDropdown(item.name)}
+                  onMouseLeave={() => setActiveDropdown(null)}
                 >
-                  {item.name}
-                  {item.children && (
-                    <ChevronDown
-                      size={14}
-                      className={cn(
-                        "transition-transform duration-200",
-                        activeDropdown === item.name && "rotate-180"
-                      )}
-                    />
-                  )}
-                  {pathname === item.href && (
-                    <motion.div
-                      layoutId="navbar-indicator"
-                      className="absolute bottom-0 left-3 right-3 h-0.5 rounded-full"
-                      style={{ background: "var(--gradient-brand)" }}
-                      transition={{ type: "spring", stiffness: 350, damping: 30 }}
-                    />
-                  )}
-                </Link>
+                  <Link
+                    href={item.href}
+                    className={cn(
+                      "flex items-center gap-1 px-4 py-2 rounded-lg transition-colors relative",
+                      isActive
+                        ? "text-[var(--brand-primary)]"
+                        : "text-[var(--theme-text-secondary)] hover:text-[var(--theme-text-primary)]"
+                    )}
+                    style={{
+                      fontSize: "var(--navbar-link-font-size)",
+                      fontWeight: "var(--navbar-link-font-weight)",
+                      transition: "var(--navbar-transition)",
+                    }}
+                  >
+                    {item.name}
+                    {item.children && (
+                      <ChevronDown
+                        size={14}
+                        className={cn(
+                          "transition-transform duration-200",
+                          activeDropdown === item.name && "rotate-180"
+                        )}
+                      />
+                    )}
+                    {isActive && (
+                      <motion.div
+                        layoutId="navbar-indicator"
+                        className="absolute bottom-0 left-3 right-3 h-0.5 rounded-full"
+                        style={{ background: "var(--gradient-brand)" }}
+                        transition={{ type: "spring", stiffness: 350, damping: 30 }}
+                      />
+                    )}
+                  </Link>
 
-                {/* Dropdown */}
-                <AnimatePresence>
-                  {item.children && activeDropdown === item.name && (
-                    <motion.div
-                      initial={{ opacity: 0, y: 8, scale: 0.96 }}
-                      animate={{ opacity: 1, y: 0, scale: 1 }}
-                      exit={{ opacity: 0, y: 8, scale: 0.96 }}
-                      transition={{ duration: 0.2, ease: [0.22, 1, 0.36, 1] }}
-                      className="absolute top-full left-0 pt-2"
-                      style={{ minWidth: "320px" }}
-                    >
-                      <div
-                        className="rounded-xl overflow-hidden shadow-xl"
-                        style={{
-                          background: resolvedTheme === "dark" ? "var(--surface-dark)" : "var(--surface-light)",
-                          border: resolvedTheme === "dark" ? "var(--default-card-border-dark)" : "var(--default-card-border-light)",
-                          padding: "var(--space-2)",
-                        }}
+                  {/* Dropdown */}
+                  <AnimatePresence>
+                    {item.children && activeDropdown === item.name && (
+                      <motion.div
+                        initial={{ opacity: 0, y: 8, scale: 0.96 }}
+                        animate={{ opacity: 1, y: 0, scale: 1 }}
+                        exit={{ opacity: 0, y: 8, scale: 0.96 }}
+                        transition={{ duration: 0.2, ease: [0.22, 1, 0.36, 1] }}
+                        className="absolute top-full left-0 pt-2"
+                        style={{ minWidth: "320px" }}
                       >
-                        {item.children.map((child) => (
-                          <Link
-                            key={child.name}
-                            href={child.href}
-                            className="flex flex-col gap-0.5 px-4 py-3 rounded-lg transition-colors hover:bg-[var(--theme-surface-hover)]"
-                          >
-                            <span
-                              className="text-sm font-medium"
-                              style={{ color: "var(--theme-text-primary)" }}
+                        <div
+                          className="rounded-xl overflow-hidden shadow-xl"
+                          style={{
+                            background: resolvedTheme === "dark" ? "var(--surface-dark)" : "var(--surface-light)",
+                            border: resolvedTheme === "dark" ? "var(--default-card-border-dark)" : "var(--default-card-border-light)",
+                            padding: "var(--space-2)",
+                          }}
+                        >
+                          {item.children.map((child) => (
+                            <Link
+                              key={child.name}
+                              href={child.href}
+                              className="flex flex-col gap-0.5 px-4 py-3 rounded-lg transition-colors hover:bg-[var(--theme-surface-hover)]"
                             >
-                              {child.name}
-                            </span>
-                            <span
-                              className="text-xs"
-                              style={{ color: "var(--theme-text-tertiary)" }}
-                            >
-                              {child.description}
-                            </span>
-                          </Link>
-                        ))}
-                      </div>
-                    </motion.div>
-                  )}
-                </AnimatePresence>
-              </div>
-            ))}
+                              <span
+                                className="text-sm font-medium"
+                                style={{ color: "var(--theme-text-primary)" }}
+                              >
+                                {child.name}
+                              </span>
+                              <span
+                                className="text-xs"
+                                style={{ color: "var(--theme-text-tertiary)" }}
+                              >
+                                {child.description}
+                              </span>
+                            </Link>
+                          ))}
+                        </div>
+                      </motion.div>
+                    )}
+                  </AnimatePresence>
+                </div>
+              );
+            })}
           </div>
 
           {/* Right Side Actions */}
@@ -318,42 +321,45 @@ export function Navbar() {
               </div>
 
               <div style={{ padding: "var(--space-3) var(--space-5)" }}>
-                {navigation.map((item, i) => (
-                  <motion.div
-                    key={item.name}
-                    initial={{ opacity: 0, x: 20 }}
-                    animate={{ opacity: 1, x: 0 }}
-                    transition={{ delay: i * 0.05, duration: 0.3 }}
-                  >
-                    <Link
-                      href={item.href}
-                      className={cn(
-                        "flex items-center justify-between py-3 px-3 rounded-lg text-lg font-medium transition-colors",
-                        pathname === item.href
-                          ? "text-[var(--brand-primary)] bg-[var(--brand-primary)]/5"
-                          : "text-[var(--theme-text-primary)] hover:bg-[var(--theme-surface-hover)]"
-                      )}
+                {navigation.map((item, i) => {
+                  const isActive = pathname === item.href || (item.href !== "/" && pathname.startsWith(item.href));
+                  return (
+                    <motion.div
+                      key={item.name}
+                      initial={{ opacity: 0, x: 20 }}
+                      animate={{ opacity: 1, x: 0 }}
+                      transition={{ delay: i * 0.05, duration: 0.3 }}
                     >
-                      {item.name}
-                      {pathname === item.href && (
-                        <div className="w-2 h-2 rounded-full" style={{ background: "var(--brand-primary)" }} />
+                      <Link
+                        href={item.href}
+                        className={cn(
+                          "flex items-center justify-between py-3 px-3 rounded-lg text-lg font-medium transition-colors",
+                          isActive
+                            ? "text-[var(--brand-primary)] bg-[var(--brand-primary)]/5"
+                            : "text-[var(--theme-text-primary)] hover:bg-[var(--theme-surface-hover)]"
+                        )}
+                      >
+                        {item.name}
+                        {isActive && (
+                          <div className="w-2 h-2 rounded-full" style={{ background: "var(--brand-primary)" }} />
+                        )}
+                      </Link>
+                      {item.children && (
+                        <div className="pl-4 pb-2">
+                          {item.children.map((child) => (
+                            <Link
+                              key={child.name}
+                              href={child.href}
+                              className="block py-2 px-3 text-sm rounded-lg transition-colors text-[var(--theme-text-secondary)] hover:text-[var(--theme-text-primary)] hover:bg-[var(--theme-surface-hover)]"
+                            >
+                              {child.name}
+                            </Link>
+                          ))}
+                        </div>
                       )}
-                    </Link>
-                    {item.children && (
-                      <div className="pl-4 pb-2">
-                        {item.children.map((child) => (
-                          <Link
-                            key={child.name}
-                            href={child.href}
-                            className="block py-2 px-3 text-sm rounded-lg transition-colors text-[var(--theme-text-secondary)] hover:text-[var(--theme-text-primary)] hover:bg-[var(--theme-surface-hover)]"
-                          >
-                            {child.name}
-                          </Link>
-                        ))}
-                      </div>
-                    )}
-                  </motion.div>
-                ))}
+                    </motion.div>
+                  );
+                })}
 
                 <div className="mt-6 pt-6" style={{ borderTop: `1px solid var(--theme-border)` }}>
                   <Link

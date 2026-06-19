@@ -2,7 +2,6 @@
 
 import { motion } from "framer-motion";
 import { SectionWrapper, SectionHeader } from "@/components/ui/section-wrapper";
-import { Card } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Server, Zap, LayoutGrid, ArrowRight, ShieldCheck, Cpu } from "lucide-react";
 
@@ -83,41 +82,40 @@ export default function SolutionsPage() {
 
       {/* Solutions Cards */}
       <SectionWrapper background="secondary" padding="lg">
-        <div className="grid grid-cols-1 lg:grid-cols-3 gap-8" style={{ gap: "var(--grid-gap)" }}>
+        <div className="grid grid-cols-1 lg:grid-cols-3 gap-10">
           {solutions.map((sol, idx) => (
             <motion.div
               key={sol.title}
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
-              transition={{ delay: idx * 0.1 }}
+              transition={{ delay: idx * 0.08 }}
+              className="group flex flex-col justify-between border-t-2 border-[var(--theme-border)] pt-8 hover:border-[var(--brand-primary)] transition-colors duration-300"
             >
-              <Card className="h-full flex flex-col justify-between">
-                <div>
-                  <div
-                    className="w-16 h-16 rounded-2xl bg-[var(--theme-bg-secondary)] flex items-center justify-center mb-6"
-                    style={{ background: "var(--feature-card-icon-bg)" }}
-                  >
-                    {sol.icon}
-                  </div>
-                  <h3 className="text-2xl font-bold mb-4">{sol.title}</h3>
-                  <p className="text-sm text-[var(--theme-text-secondary)] leading-relaxed mb-6">
-                    {sol.description}
-                  </p>
-                  <div className="border-t border-[var(--theme-border-subtle)] my-4" />
-                  <ul className="space-y-3 mb-8">
-                    {sol.features.map((feat) => (
-                      <li key={feat} className="flex items-start gap-2 text-xs text-[var(--theme-text-secondary)]">
-                        <span className="text-[var(--brand-primary)] font-bold">✓</span>
-                        <span>{feat}</span>
-                      </li>
-                    ))}
-                  </ul>
+              <div>
+                <div
+                  className="w-16 h-16 rounded-2xl bg-[var(--theme-bg-secondary)] border border-[var(--theme-border)] flex items-center justify-center mb-6 transition-transform duration-500 group-hover:scale-105 group-hover:rotate-[2deg]"
+                  style={{ background: "var(--feature-card-icon-bg)" }}
+                >
+                  {sol.icon}
                 </div>
-                <Button variant="primary" fullWidth href="/get-quote">
-                  Get Started <ArrowRight className="w-4 h-4 ml-1" />
-                </Button>
-              </Card>
+                <h3 className="text-2xl font-bold mb-4 transition-colors duration-300 group-hover:text-[var(--brand-primary)]">{sol.title}</h3>
+                <p className="text-sm leading-relaxed mb-6" style={{ color: "var(--theme-text-secondary)" }}>
+                  {sol.description}
+                </p>
+                <div className="border-t border-[var(--theme-border-subtle)] my-4" />
+                <ul className="space-y-3 mb-8">
+                  {sol.features.map((feat) => (
+                    <li key={feat} className="flex items-start gap-2 text-xs" style={{ color: "var(--theme-text-secondary)" }}>
+                      <span className="text-[var(--brand-primary)] font-bold">✓</span>
+                      <span>{feat}</span>
+                    </li>
+                  ))}
+                </ul>
+              </div>
+              <Button variant="primary" fullWidth href="/get-quote" className="group-hover:bg-[var(--brand-primary)] group-hover:text-white transition-colors duration-300">
+                Get Started <ArrowRight className="w-4 h-4 ml-1" />
+              </Button>
             </motion.div>
           ))}
         </div>
@@ -145,24 +143,18 @@ export default function SolutionsPage() {
             </div>
           </div>
           <div className="flex-1 w-full">
-            <div
-              className="p-8 relative overflow-hidden"
-              style={{
-                background: "var(--theme-surface)",
-                border: "1px solid var(--theme-border)",
-                borderRadius: "var(--radius-2xl)",
-              }}
-            >
+            <div className="border-t border-[var(--theme-border)] pt-8">
               <div className="text-xs uppercase tracking-widest text-[var(--brand-primary)] font-bold mb-4">Supported Integrations</div>
               <div className="flex flex-wrap gap-3">
                 {["Stripe", "AWS", "Google Cloud", "Azure", "Salesforce", "HubSpot", "Zapier", "Slack", "OAuth 2.0", "GraphQL", "Algolia", "OpenAI"].map((t) => (
                   <span
                     key={t}
-                    className="text-xs px-3.5 py-2 rounded-xl font-medium"
+                    className="text-xs px-3.5 py-2 font-medium"
                     style={{
                       background: "var(--theme-bg-secondary)",
                       border: "1px solid var(--theme-border)",
-                      borderRadius: "var(--radius-md)",
+                      borderRadius: "var(--radius-lg)",
+                      color: "var(--theme-text-secondary)",
                     }}
                   >
                     {t}

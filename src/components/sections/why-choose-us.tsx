@@ -44,7 +44,7 @@ export function WhyChooseUsSection() {
         description="We're a small, senior team that treats your project like our own product. No juniors learning on your dime."
       />
 
-      <div className="space-y-4 max-w-4xl mx-auto">
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-x-16 gap-y-16 max-w-5xl mx-auto mt-12">
         {reasons.map((reason, i) => (
           <motion.div
             key={reason.title}
@@ -52,47 +52,40 @@ export function WhyChooseUsSection() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true, margin: "-50px" }}
             transition={{ duration: 0.5, ease: [0.22, 1, 0.36, 1], delay: i * 0.08 }}
-            className="group"
-            style={{
-              background: "var(--theme-surface)",
-              border: "1px solid var(--theme-border)",
-              borderRadius: "var(--radius-xl)",
-              transition: "var(--default-card-transition)",
-            }}
+            className="group relative flex flex-col items-start"
           >
-            <div className="grid grid-cols-1 md:grid-cols-12 gap-4 md:gap-8 items-center p-6 md:p-8">
-              {/* Metric — left side */}
-              <div className="md:col-span-3">
-                <div
-                  className="text-3xl md:text-4xl font-bold tabular-nums"
-                  style={{ color: "var(--brand-primary)" }}
-                >
-                  {reason.metric}
-                </div>
-                <div
-                  className="text-xs uppercase tracking-wider mt-1"
-                  style={{ color: "var(--theme-text-tertiary)", letterSpacing: "0.06em" }}
-                >
-                  {reason.metricLabel}
-                </div>
-              </div>
-
-              {/* Content — right side */}
-              <div className="md:col-span-9">
-                <h3
-                  className="text-lg font-semibold mb-1.5"
-                  style={{ color: "var(--theme-text-primary)" }}
-                >
-                  {reason.title}
-                </h3>
-                <p
-                  className="text-sm leading-relaxed"
-                  style={{ color: "var(--theme-text-secondary)", lineHeight: "1.7" }}
-                >
-                  {reason.description}
-                </p>
-              </div>
+            {/* Metric Display */}
+            <div className="flex items-baseline gap-2.5">
+              <span
+                className="text-5xl md:text-6xl font-extrabold tracking-tight transition-transform duration-300 group-hover:scale-105 origin-left"
+                style={{ color: "var(--brand-primary)", fontFamily: "var(--font-heading)" }}
+              >
+                {reason.metric}
+              </span>
+              <span
+                className="text-xs uppercase tracking-wider font-semibold opacity-70"
+                style={{ color: "var(--theme-text-tertiary)", letterSpacing: "0.06em" }}
+              >
+                {reason.metricLabel}
+              </span>
             </div>
+
+            {/* Accent Line */}
+            <div className="w-12 h-[2px] bg-[var(--theme-border)] mt-4 mb-3 transition-all duration-300 group-hover:w-20 group-hover:bg-[var(--brand-primary)]" />
+
+            {/* Content */}
+            <h3
+              className="text-lg font-bold mb-2 transition-colors duration-300 group-hover:text-[var(--brand-primary)]"
+              style={{ color: "var(--theme-text-primary)" }}
+            >
+              {reason.title}
+            </h3>
+            <p
+              className="text-sm leading-relaxed"
+              style={{ color: "var(--theme-text-secondary)", lineHeight: "1.7" }}
+            >
+              {reason.description}
+            </p>
           </motion.div>
         ))}
       </div>

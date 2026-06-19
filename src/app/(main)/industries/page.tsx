@@ -2,7 +2,6 @@
 
 import { motion } from "framer-motion";
 import { SectionWrapper, SectionHeader } from "@/components/ui/section-wrapper";
-import { Card } from "@/components/ui/card";
 import { Heart, Landmark, ShoppingBag, GraduationCap, Truck, Home } from "lucide-react";
 
 const industries = [
@@ -79,27 +78,28 @@ export default function IndustriesPage() {
 
       {/* Grid of industries */}
       <SectionWrapper background="secondary" padding="lg">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6" style={{ gap: "var(--grid-gap)" }}>
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-x-10 gap-y-12">
           {industries.map((ind, idx) => (
             <motion.div
               key={ind.title}
               initial={{ opacity: 0, y: 25 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
-              transition={{ delay: idx * 0.08 }}
+              transition={{ delay: idx * 0.06 }}
+              className="group flex flex-col gap-4 border-b border-[var(--theme-border)] pb-8 last:border-b-0 md:border-b-0 md:pb-0"
             >
-              <Card className="h-full">
-                <div
-                  className="w-16 h-16 rounded-2xl bg-[var(--theme-bg-secondary)] flex items-center justify-center mb-6"
-                  style={{ background: "var(--feature-card-icon-bg)" }}
-                >
-                  {ind.icon}
-                </div>
-                <h3 className="text-xl font-bold mb-3">{ind.title}</h3>
+              <div
+                className="w-16 h-16 rounded-2xl bg-[var(--theme-bg-secondary)] border border-[var(--theme-border)] flex items-center justify-center transition-transform duration-500 group-hover:scale-105 group-hover:rotate-[2deg]"
+                style={{ background: "var(--feature-card-icon-bg)" }}
+              >
+                {ind.icon}
+              </div>
+              <div>
+                <h3 className="text-xl font-bold mb-3 transition-colors duration-300 group-hover:text-[var(--brand-primary)]">{ind.title}</h3>
                 <p className="text-sm text-[var(--theme-text-secondary)] leading-relaxed">
                   {ind.description}
                 </p>
-              </Card>
+              </div>
             </motion.div>
           ))}
         </div>

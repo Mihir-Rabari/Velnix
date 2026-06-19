@@ -82,7 +82,7 @@ export function FeatureCard({ icon, title, description, className }: FeatureCard
   const smoothX = useSpring(mouseX, { stiffness: 300, damping: 30 });
   const smoothY = useSpring(mouseY, { stiffness: 300, damping: 30 });
 
-  const background = useMotionTemplate`radial-gradient(350px circle at ${smoothX}px ${smoothY}px, rgba(108, 58, 237, 0.06), transparent 80%)`;
+  const background = useMotionTemplate`radial-gradient(350px circle at ${smoothX}px ${smoothY}px, var(--brand-primary-glow), transparent 80%)`;
 
   const handleMouseMove = (e: React.MouseEvent) => {
     if (!cardRef.current) return;

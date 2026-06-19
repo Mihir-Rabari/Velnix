@@ -79,7 +79,7 @@ const containerVariants = {
 
 const itemVariants = {
   hidden: { opacity: 0, y: 20 },
-  visible: { opacity: 1, y: 0, transition: { duration: 0.5, ease: [0.22, 1, 0.36, 1] } },
+  visible: { opacity: 1, y: 0, transition: { duration: 0.5, ease: [0.22, 1, 0.36, 1] as const } },
 };
 
 export function Footer() {
@@ -116,10 +116,11 @@ export function Footer() {
           </div>
           <Link
             href="/get-quote"
-            className="flex items-center gap-3 bg-white text-[var(--brand-primary)] font-bold px-8 py-4 rounded-xl transition-all hover:-translate-y-1 hover:shadow-2xl whitespace-nowrap"
+            className="flex items-center gap-3 bg-white font-bold px-8 py-4 rounded-xl transition-all hover:-translate-y-1 hover:shadow-2xl whitespace-nowrap"
             style={{
               fontSize: "var(--primary-button-font-size)",
               borderRadius: "var(--radius-xl)",
+              color: "#001A23",
             }}
           >
             Start a Project

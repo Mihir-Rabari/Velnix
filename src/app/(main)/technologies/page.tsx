@@ -2,7 +2,6 @@
 
 import { motion } from "framer-motion";
 import { SectionWrapper, SectionHeader } from "@/components/ui/section-wrapper";
-import { Card } from "@/components/ui/card";
 import { Code2, Server, Database, Smartphone, Cloud, Brain, Shield, Heart } from "lucide-react";
 
 const details = [
@@ -85,45 +84,50 @@ export default function TechnologiesPage() {
 
       {/* Categories */}
       <SectionWrapper background="secondary" padding="lg">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6" style={{ gap: "var(--grid-gap)" }}>
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-x-10 gap-y-12">
           {details.map((item, idx) => (
             <motion.div
               key={item.title}
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
-              transition={{ delay: idx * 0.08 }}
+              transition={{ delay: idx * 0.06 }}
+              className="group flex flex-col justify-between border-b border-[var(--theme-border)] pb-8 last:border-b-0 md:border-b-0 md:pb-0"
             >
-              <Card className="h-full flex flex-col justify-between">
-                <div>
-                  <div className="flex items-center gap-3 mb-4">
-                    <div className="p-2.5 rounded-xl bg-[var(--theme-bg-secondary)]" style={{ borderRadius: "var(--radius-lg)" }}>
-                      {item.icon}
-                    </div>
-                    <h3 className="text-lg font-bold">{item.title}</h3>
+              <div>
+                <div className="flex items-center gap-4 mb-4">
+                  <div
+                    className="p-3 bg-[var(--theme-bg-secondary)] border border-[var(--theme-border)] transition-transform duration-300 group-hover:scale-110"
+                    style={{ borderRadius: "var(--radius-lg)" }}
+                  >
+                    {item.icon}
                   </div>
-                  <p className="text-sm text-[var(--theme-text-secondary)] leading-relaxed mb-6">
-                    {item.description}
-                  </p>
+                  <h3 className="text-lg font-bold transition-colors duration-300 group-hover:text-[var(--brand-primary)]">
+                    {item.title}
+                  </h3>
                 </div>
-                <div>
-                  <div className="border-t border-[var(--theme-border-subtle)] my-4" />
-                  <div className="flex flex-wrap gap-2">
-                    {item.techs.map((t) => (
-                      <span
-                        key={t}
-                        className="text-xs px-2.5 py-1.5 rounded-lg font-medium"
-                        style={{
-                          background: "var(--theme-bg-secondary)",
-                          border: "1px solid var(--theme-border)",
-                        }}
-                      >
-                        {t}
-                      </span>
-                    ))}
-                  </div>
+                <p className="text-sm leading-relaxed mb-6" style={{ color: "var(--theme-text-secondary)", lineHeight: "1.7" }}>
+                  {item.description}
+                </p>
+              </div>
+              <div>
+                <div className="flex flex-wrap gap-2">
+                  {item.techs.map((t) => (
+                    <span
+                      key={t}
+                      className="text-xs px-2.5 py-1.5 font-medium"
+                      style={{
+                        background: "var(--theme-bg-secondary)",
+                        border: "1px solid var(--theme-border)",
+                        borderRadius: "var(--radius-lg)",
+                        color: "var(--theme-text-tertiary)",
+                      }}
+                    >
+                      {t}
+                    </span>
+                  ))}
                 </div>
-              </Card>
+              </div>
             </motion.div>
           ))}
         </div>

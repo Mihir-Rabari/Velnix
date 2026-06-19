@@ -2,7 +2,6 @@
 
 import { motion } from "framer-motion";
 import { SectionWrapper, SectionHeader } from "@/components/ui/section-wrapper";
-import { Card } from "@/components/ui/card";
 import { Shield, Target, Eye, Users } from "lucide-react";
 
 const values = [
@@ -81,24 +80,28 @@ export default function AboutPage() {
           title="The principles that guide our work"
           description="We hold ourselves to the highest standards of craft, engineering, and professionalism."
         />
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-6" style={{ gap: "var(--grid-gap)" }}>
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-x-12 gap-y-10">
           {values.map((val, idx) => (
             <motion.div
               key={val.title}
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
-              transition={{ delay: idx * 0.1 }}
+              transition={{ delay: idx * 0.08 }}
+              className="group flex flex-col gap-4 border-b border-[var(--theme-border)] pb-8 last:border-b-0 md:border-b-0 md:pb-0"
             >
-              <Card className="h-full">
-                <div className="flex items-center gap-4 mb-4">
-                  <div className="p-3 rounded-xl bg-[var(--theme-bg-secondary)]" style={{ borderRadius: "var(--radius-lg)" }}>
-                    {val.icon}
-                  </div>
-                  <h3 className="text-xl font-bold">{val.title}</h3>
+              <div className="flex items-center gap-4">
+                <div
+                  className="p-3 bg-[var(--theme-bg-secondary)] border border-[var(--theme-border)] transition-transform duration-300 group-hover:scale-110"
+                  style={{ borderRadius: "var(--radius-lg)" }}
+                >
+                  {val.icon}
                 </div>
-                <p className="text-[var(--theme-text-secondary)] leading-relaxed">{val.description}</p>
-              </Card>
+                <h3 className="text-xl font-bold transition-colors duration-300 group-hover:text-[var(--brand-primary)]">
+                  {val.title}
+                </h3>
+              </div>
+              <p className="text-[var(--theme-text-secondary)] leading-relaxed">{val.description}</p>
             </motion.div>
           ))}
         </div>
@@ -111,18 +114,19 @@ export default function AboutPage() {
           title="Engineers, designers, innovators"
           description="Meet the leaders driving technical excellence and elegant designs at The Velnix."
         />
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6" style={{ gap: "var(--grid-gap)" }}>
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
           {team.map((member, idx) => (
             <motion.div
               key={member.name}
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
-              transition={{ delay: idx * 0.1 }}
+              transition={{ delay: idx * 0.08 }}
+              className="group flex flex-col items-center text-center"
             >
-              <Card className="h-full flex flex-col items-center text-center p-6">
+              <div className="relative mb-6">
                 <div
-                  className="w-24 h-24 rounded-full flex items-center justify-center text-2xl font-bold text-white mb-6"
+                  className="w-24 h-24 rounded-full flex items-center justify-center text-2xl font-bold text-white transition-transform duration-500 group-hover:scale-105 group-hover:rotate-[3deg]"
                   style={{
                     background: "var(--gradient-brand)",
                     boxShadow: "var(--shadow-glow-brand)",
@@ -130,10 +134,16 @@ export default function AboutPage() {
                 >
                   {member.image}
                 </div>
-                <h3 className="text-lg font-bold mb-1">{member.name}</h3>
-                <span className="text-sm text-[var(--brand-primary)] font-semibold mb-3 block">{member.role}</span>
-                <p className="text-sm text-[var(--theme-text-secondary)] leading-relaxed">{member.bio}</p>
-              </Card>
+              </div>
+              <h3 className="text-lg font-bold mb-1 transition-colors duration-300 group-hover:text-[var(--brand-primary)]">
+                {member.name}
+              </h3>
+              <span className="text-sm font-semibold mb-3 block" style={{ color: "var(--brand-primary)" }}>
+                {member.role}
+              </span>
+              <p className="text-sm leading-relaxed" style={{ color: "var(--theme-text-secondary)" }}>
+                {member.bio}
+              </p>
             </motion.div>
           ))}
         </div>

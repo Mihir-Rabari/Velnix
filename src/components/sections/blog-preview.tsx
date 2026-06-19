@@ -1,42 +1,42 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { ArrowRight, Clock } from "lucide-react";
+import { ArrowRight, Clock, Calendar } from "lucide-react";
 import Link from "next/link";
 import { SectionWrapper, SectionHeader } from "@/components/ui/section-wrapper";
 
 const posts = [
   {
-    title: "Why we stopped using microservices for early-stage startups",
+    title: "The Future of AI in Custom Software Development",
     excerpt:
-      "The industry loves to push microservices as the default. But for most teams under 20 engineers, a well-structured monolith gets you further, faster.",
-    category: "Architecture",
+      "How artificial intelligence is transforming the way we architect, build, and deploy custom software solutions. Elevating quality and shortening delivery timelines.",
+    category: "AI & Engineering",
     date: "June 12, 2026",
     readTime: "8 min",
-    color: "#6366F1",
-    slug: "/blog/microservices-early-stage",
+    color: "var(--accent-violet)",
+    slug: "/blog/future-ai-custom-software",
     featured: true,
   },
   {
-    title: "Our approach to AI-assisted code review",
+    title: "Why Startups Need a Strong Technical Foundation",
     excerpt:
-      "How we integrated AI tooling into our PR workflow without sacrificing code quality or team ownership.",
-    category: "Engineering",
+      "Building on solid engineering principles from day one saves time, money, and headaches as you scale your team and codebase.",
+    category: "Startup Guide",
     date: "June 8, 2026",
-    readTime: "5 min",
-    color: "#06B6D4",
-    slug: "/blog/ai-code-review",
+    readTime: "6 min",
+    color: "var(--accent-cyan)",
+    slug: "/blog/startup-technical-foundation",
     featured: false,
   },
   {
-    title: "Designing for trust: lessons from fintech projects",
+    title: "Microservices vs Monolith: Making the Right Choice",
     excerpt:
-      "When users hand you their financial data, every design decision matters. Here's what we learned across 12 fintech builds.",
-    category: "Design",
+      "A practical guide to choosing the right architecture for your project based on team size, scale, and timeline. Start modular and scale carefully.",
+    category: "Architecture",
     date: "June 3, 2026",
-    readTime: "6 min",
-    color: "#10B981",
-    slug: "/blog/designing-for-trust",
+    readTime: "10 min",
+    color: "var(--accent-emerald)",
+    slug: "/blog/microservices-vs-monolith",
     featured: false,
   },
 ];
@@ -53,37 +53,29 @@ export function BlogPreviewSection() {
         title="Things we've been thinking about"
       />
 
-      <div className="grid grid-cols-1 lg:grid-cols-12 gap-6">
-        {/* Featured post — larger */}
+      <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16">
+        {/* Left: Featured Post - Immersive borderless column */}
         <motion.div
-          className="lg:col-span-7"
+          className="lg:col-span-6 flex flex-col"
           initial={{ opacity: 0, y: 25 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.6 }}
         >
           <Link href={featuredPost.slug} className="block group h-full">
-            <div
-              className="h-full flex flex-col"
-              style={{
-                background: "var(--theme-surface)",
-                border: "1px solid var(--theme-border)",
-                borderRadius: "var(--radius-2xl)",
-                overflow: "hidden",
-                transition: "var(--default-card-transition)",
-              }}
-            >
-              {/* Image area */}
+            <div className="flex flex-col gap-5 h-full">
+              {/* Image Banner area */}
               <div
-                className="relative h-56 md:h-64"
+                className="relative h-60 md:h-72 overflow-hidden"
                 style={{
-                  background: `linear-gradient(135deg, ${featuredPost.color}12, ${featuredPost.color}05)`,
-                  borderBottom: "1px solid var(--theme-border)",
+                  background: `linear-gradient(135deg, ${featuredPost.color}15, ${featuredPost.color}05)`,
+                  border: "1px solid var(--theme-border)",
+                  borderRadius: "var(--radius-2xl)",
                 }}
               >
                 <div className="absolute inset-0 flex items-center justify-center">
                   <div
-                    className="text-8xl font-bold opacity-[0.06]"
+                    className="text-[120px] font-bold opacity-[0.06] select-none"
                     style={{ color: featuredPost.color }}
                   >
                     {featuredPost.category.charAt(0)}
@@ -95,6 +87,7 @@ export function BlogPreviewSection() {
                     style={{
                       background: `${featuredPost.color}12`,
                       color: featuredPost.color,
+                      border: `1px solid ${featuredPost.color}20`,
                       borderRadius: "var(--radius-full)",
                     }}
                   >
@@ -103,24 +96,31 @@ export function BlogPreviewSection() {
                 </div>
               </div>
 
-              <div className="flex flex-col flex-1 p-7">
-                <h3
-                  className="text-xl md:text-2xl font-semibold mb-3 group-hover:text-[var(--brand-primary)] transition-colors"
-                  style={{ color: "var(--theme-text-primary)", lineHeight: "1.3" }}
-                >
-                  {featuredPost.title}
-                </h3>
-                <p
-                  className="text-base mb-5 flex-1"
-                  style={{ color: "var(--theme-text-secondary)", lineHeight: "1.7" }}
-                >
-                  {featuredPost.excerpt}
-                </p>
-                <div className="flex items-center gap-3 text-xs" style={{ color: "var(--theme-text-tertiary)" }}>
-                  <span>{featuredPost.date}</span>
-                  <span>·</span>
-                  <span className="flex items-center gap-1">
-                    <Clock size={12} /> {featuredPost.readTime}
+              {/* Title & Excerpt */}
+              <div className="px-1 flex-1 flex flex-col justify-between">
+                <div>
+                  <h3
+                    className="text-2xl font-bold mb-3 group-hover:text-[var(--brand-primary)] transition-colors leading-tight"
+                    style={{ color: "var(--theme-text-primary)" }}
+                  >
+                    {featuredPost.title}
+                  </h3>
+                  <p
+                    className="text-sm mb-4 leading-relaxed"
+                    style={{ color: "var(--theme-text-secondary)" }}
+                  >
+                    {featuredPost.excerpt}
+                  </p>
+                </div>
+
+                <div className="flex items-center justify-between text-xs" style={{ color: "var(--theme-text-tertiary)" }}>
+                  <div className="flex items-center gap-3">
+                    <span className="flex items-center gap-1"><Calendar size={13} /> {featuredPost.date}</span>
+                    <span>·</span>
+                    <span className="flex items-center gap-1"><Clock size={13} /> {featuredPost.readTime}</span>
+                  </div>
+                  <span className="flex items-center gap-1 text-[var(--brand-primary)] font-semibold opacity-0 group-hover:opacity-100 transition-opacity">
+                    Read article <ArrowRight size={13} />
                   </span>
                 </div>
               </div>
@@ -128,55 +128,54 @@ export function BlogPreviewSection() {
           </Link>
         </motion.div>
 
-        {/* Secondary posts — stacked */}
-        <div className="lg:col-span-5 flex flex-col gap-6">
-          {secondaryPosts.map((post, i) => (
-            <motion.div
-              key={post.title}
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.5, delay: 0.1 + i * 0.1 }}
-              className="flex-1"
-            >
-              <Link href={post.slug} className="block group h-full">
-                <div
-                  className="h-full flex flex-col"
-                  style={{
-                    background: "var(--theme-surface)",
-                    border: "1px solid var(--theme-border)",
-                    borderRadius: "var(--radius-xl)",
-                    padding: "24px",
-                    transition: "var(--default-card-transition)",
-                  }}
-                >
-                  <span
-                    className="text-xs font-semibold mb-3 inline-block"
-                    style={{ color: post.color }}
+        {/* Right: Editorial News List */}
+        <div className="lg:col-span-6 flex flex-col justify-center">
+          <h4 className="text-xs font-semibold uppercase tracking-wider mb-6 text-[var(--theme-text-tertiary)] pl-2">
+            More News & Insights
+          </h4>
+          <div className="border-t border-[var(--theme-border)]">
+            {secondaryPosts.map((post, i) => (
+              <motion.div
+                key={post.title}
+                initial={{ opacity: 0, y: 15 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.5, delay: 0.1 + i * 0.1 }}
+              >
+                <Link href={post.slug} className="block group">
+                  <div
+                    className="flex flex-col py-6 px-4 border-b border-[var(--theme-border-subtle)] transition-all duration-300 hover:bg-[var(--theme-surface-hover)]/30"
                   >
-                    {post.category}
-                  </span>
-                  <h3
-                    className="text-lg font-semibold mb-2 group-hover:text-[var(--brand-primary)] transition-colors"
-                    style={{ color: "var(--theme-text-primary)", lineHeight: "1.35" }}
-                  >
-                    {post.title}
-                  </h3>
-                  <p
-                    className="text-sm flex-1 mb-4"
-                    style={{ color: "var(--theme-text-secondary)", lineHeight: "1.6" }}
-                  >
-                    {post.excerpt}
-                  </p>
-                  <div className="flex items-center gap-3 text-xs" style={{ color: "var(--theme-text-tertiary)" }}>
-                    <span>{post.date}</span>
-                    <span>·</span>
-                    <span>{post.readTime}</span>
+                    <div className="flex items-center gap-3 mb-2">
+                      <span
+                        className="text-xs font-semibold"
+                        style={{ color: post.color }}
+                      >
+                        {post.category}
+                      </span>
+                      <span className="text-xs text-[var(--theme-text-tertiary)] flex items-center gap-1">
+                        · <Clock size={11} /> {post.readTime}
+                      </span>
+                    </div>
+
+                    <div className="flex justify-between items-start gap-4">
+                      <h3
+                        className="text-lg font-bold group-hover:text-[var(--brand-primary)] transition-colors leading-snug"
+                        style={{ color: "var(--theme-text-primary)" }}
+                      >
+                        {post.title}
+                      </h3>
+                      <ArrowRight
+                        size={16}
+                        className="transition-transform duration-300 group-hover:translate-x-1 flex-shrink-0 mt-1"
+                        style={{ color: "var(--brand-primary)" }}
+                      />
+                    </div>
                   </div>
-                </div>
-              </Link>
-            </motion.div>
-          ))}
+                </Link>
+              </motion.div>
+            ))}
+          </div>
         </div>
       </div>
 

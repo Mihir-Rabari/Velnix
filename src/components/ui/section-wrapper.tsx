@@ -3,6 +3,7 @@
 import { useRef } from "react";
 import { motion, useInView } from "framer-motion";
 import { cn } from "@/lib/utils";
+import { ScrollRevealText } from "./scroll-reveal-text";
 
 interface SectionWrapperProps {
   children: React.ReactNode;
@@ -12,6 +13,7 @@ interface SectionWrapperProps {
   padding?: "sm" | "md" | "lg" | "xl";
   containerWidth?: "sm" | "md" | "lg" | "xl" | "2xl" | "full";
   animate?: boolean;
+  overflowVisible?: boolean;
 }
 
 const bgMap: Record<string, string> = {
@@ -46,6 +48,7 @@ export function SectionWrapper({
   padding = "lg",
   containerWidth = "xl",
   animate = true,
+  overflowVisible = false,
 }: SectionWrapperProps) {
   const ref = useRef<HTMLElement>(null);
   const isInView = useInView(ref, { once: true, margin: "-100px" });
@@ -69,7 +72,11 @@ export function SectionWrapper({
     <section
       ref={ref}
       id={id}
-      className={cn("relative overflow-hidden", className)}
+      className={cn(
+        "relative",
+        overflowVisible ? "overflow-visible" : "overflow-hidden",
+        className
+      )}
       style={{
         background: bgMap[background],
         paddingTop: paddingMap[padding],
@@ -143,7 +150,7 @@ export function SectionHeader({
             lineHeight: "1.15",
           }}
         >
-          {title}
+          <ScrollRevealText text={title} />
         </h2>
         {description && (
           <p
@@ -184,7 +191,7 @@ export function SectionHeader({
             textAlign: align === "center" ? "center" : "left",
           }}
         >
-          {title}
+          <ScrollRevealText text={title} />
         </h2>
       </div>
     );
@@ -227,7 +234,7 @@ export function SectionHeader({
           textAlign: align === "center" ? "center" : "left",
         }}
       >
-        {title}
+        <ScrollRevealText text={title} />
       </h2>
       {description && (
         <p

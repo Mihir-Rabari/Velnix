@@ -3,7 +3,6 @@
 import { useParams, notFound } from "next/navigation";
 import { motion } from "framer-motion";
 import { SectionWrapper } from "@/components/ui/section-wrapper";
-import { Card } from "@/components/ui/card";
 import { ArrowLeft, Clock, User, Calendar } from "lucide-react";
 import Link from "next/link";
 
@@ -118,13 +117,11 @@ export default function BlogPostPage() {
       {/* Article Body */}
       <SectionWrapper background="secondary" padding="lg">
         <div className="max-w-3xl mx-auto">
-          <Card>
-            <div className="space-y-6 text-[var(--theme-text-secondary)] text-base md:text-lg leading-relaxed">
-              {post.content.map((p, i) => (
-                <p key={i}>{p}</p>
-              ))}
-            </div>
-          </Card>
+          <div className="space-y-6 text-[var(--theme-text-secondary)] text-base md:text-lg leading-relaxed">
+            {post.content.map((p, i) => (
+              <p key={i}>{p}</p>
+            ))}
+          </div>
         </div>
       </SectionWrapper>
     </div>

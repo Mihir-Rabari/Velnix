@@ -3,7 +3,6 @@
 import { useParams, notFound } from "next/navigation";
 import { motion } from "framer-motion";
 import { SectionWrapper, SectionHeader } from "@/components/ui/section-wrapper";
-import { Card } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { ArrowLeft, Clock, Code, Award, CheckCircle } from "lucide-react";
 import Link from "next/link";
@@ -131,29 +130,29 @@ export default function CaseStudyPage() {
 
       {/* Case Details */}
       <SectionWrapper background="secondary" padding="lg">
-        <div className="grid grid-cols-1 lg:grid-cols-3 gap-8" style={{ gap: "var(--grid-gap)" }}>
+        <div className="grid grid-cols-1 lg:grid-cols-3 gap-12">
           {/* Main Info Columns */}
-          <div className="lg:col-span-2 space-y-8">
-            <Card>
-              <h2 className="text-xl font-bold mb-4 text-[var(--brand-primary)]">1. Problem Statement</h2>
-              <p className="text-[var(--theme-text-secondary)] leading-relaxed">{data.problem}</p>
-            </Card>
+          <div className="lg:col-span-2 space-y-12">
+            <div className="group border-b border-[var(--theme-border)] pb-8 last:border-b-0">
+              <h2 className="text-xl font-bold mb-4 transition-colors duration-300 group-hover:text-[var(--brand-primary)]">1. Problem Statement</h2>
+              <p className="text-[var(--theme-text-secondary)] leading-relaxed text-base md:text-lg">{data.problem}</p>
+            </div>
 
-            <Card>
-              <h2 className="text-xl font-bold mb-4 text-[var(--brand-primary)]">2. Research & Discovery</h2>
-              <p className="text-[var(--theme-text-secondary)] leading-relaxed">{data.research}</p>
-            </Card>
+            <div className="group border-b border-[var(--theme-border)] pb-8 last:border-b-0">
+              <h2 className="text-xl font-bold mb-4 transition-colors duration-300 group-hover:text-[var(--brand-primary)]">2. Research & Discovery</h2>
+              <p className="text-[var(--theme-text-secondary)] leading-relaxed text-base md:text-lg">{data.research}</p>
+            </div>
 
-            <Card>
-              <h2 className="text-xl font-bold mb-4 text-[var(--brand-primary)]">3. Solution & Architecture</h2>
-              <p className="text-[var(--theme-text-secondary)] leading-relaxed">{data.solution}</p>
-            </Card>
+            <div className="group border-b border-[var(--theme-border)] pb-8 last:border-b-0">
+              <h2 className="text-xl font-bold mb-4 transition-colors duration-300 group-hover:text-[var(--brand-primary)]">3. Solution & Architecture</h2>
+              <p className="text-[var(--theme-text-secondary)] leading-relaxed text-base md:text-lg">{data.solution}</p>
+            </div>
           </div>
 
           {/* Sidebar Info Columns */}
-          <div className="space-y-8">
+          <div className="space-y-10">
             {/* Tech Stack used */}
-            <Card>
+            <div className="border-t-2 border-[var(--theme-border)] pt-6">
               <div className="flex items-center gap-2 mb-4 text-[var(--brand-primary)]">
                 <Code className="w-5 h-5" />
                 <h3 className="text-lg font-bold">Tech Stack</h3>
@@ -162,20 +161,22 @@ export default function CaseStudyPage() {
                 {data.technologies.map((tech) => (
                   <span
                     key={tech}
-                    className="text-xs px-3 py-1.5 rounded-xl font-medium"
+                    className="text-xs px-3 py-1.5 font-medium"
                     style={{
                       background: "var(--theme-bg-secondary)",
                       border: "1px solid var(--theme-border)",
+                      borderRadius: "var(--radius-lg)",
+                      color: "var(--theme-text-secondary)",
                     }}
                   >
                     {tech}
                   </span>
                 ))}
               </div>
-            </Card>
+            </div>
 
             {/* Results achieved */}
-            <Card>
+            <div className="border-t-2 border-[var(--theme-border)] pt-6">
               <div className="flex items-center gap-2 mb-4 text-[var(--brand-primary)]">
                 <Award className="w-5 h-5" />
                 <h3 className="text-lg font-bold">Project Results</h3>
@@ -184,11 +185,11 @@ export default function CaseStudyPage() {
                 {data.results.map((res) => (
                   <li key={res} className="flex items-start gap-2.5">
                     <CheckCircle className="w-4 h-4 text-[var(--accent-emerald)] flex-shrink-0 mt-0.5" />
-                    <span className="text-xs text-[var(--theme-text-secondary)] leading-relaxed">{res}</span>
+                    <span className="text-sm text-[var(--theme-text-secondary)] leading-relaxed">{res}</span>
                   </li>
                 ))}
               </ul>
-            </Card>
+            </div>
           </div>
         </div>
       </SectionWrapper>

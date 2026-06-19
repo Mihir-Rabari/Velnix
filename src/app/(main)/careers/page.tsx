@@ -2,7 +2,6 @@
 
 import { motion } from "framer-motion";
 import { SectionWrapper, SectionHeader } from "@/components/ui/section-wrapper";
-import { Card } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { MapPin, Briefcase, DollarSign, Calendar, Heart, Shield, Award } from "lucide-react";
 
@@ -102,7 +101,7 @@ export default function CareersPage() {
           title="Designed for high performance"
           description="We take care of our builders so they can focus entirely on creating exceptional software."
         />
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6" style={{ gap: "var(--grid-gap)" }}>
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
           {perks.map((p, idx) => (
             <motion.div
               key={p.title}
@@ -110,19 +109,20 @@ export default function CareersPage() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ delay: idx * 0.08 }}
+              className="group flex flex-col gap-4 border-b border-[var(--theme-border)] pb-8 last:border-b-0 md:border-b-0 md:pb-0"
             >
-              <Card className="h-full">
-                <div
-                  className="w-12 h-12 rounded-xl bg-[var(--theme-bg-secondary)] flex items-center justify-center mb-6"
-                  style={{ background: "var(--feature-card-icon-bg)" }}
-                >
-                  {p.icon}
-                </div>
-                <h3 className="text-lg font-bold mb-2">{p.title}</h3>
+              <div
+                className="w-12 h-12 rounded-xl bg-[var(--theme-bg-secondary)] border border-[var(--theme-border)] flex items-center justify-center transition-transform duration-300 group-hover:scale-110"
+                style={{ background: "var(--feature-card-icon-bg)" }}
+              >
+                {p.icon}
+              </div>
+              <div>
+                <h3 className="text-lg font-bold mb-2 transition-colors duration-300 group-hover:text-[var(--brand-primary)]">{p.title}</h3>
                 <p className="text-sm text-[var(--theme-text-secondary)] leading-relaxed">
                   {p.description}
                 </p>
-              </Card>
+              </div>
             </motion.div>
           ))}
         </div>
@@ -135,7 +135,7 @@ export default function CareersPage() {
           title="Find your place at The Velnix"
           description="We are always looking for curious mindsets and excellent developers. See open opportunities."
         />
-        <div className="max-w-4xl mx-auto space-y-4">
+        <div className="max-w-4xl mx-auto border-t border-[var(--theme-border)]">
           {jobs.map((job, idx) => (
             <motion.div
               key={job.title}
@@ -143,30 +143,29 @@ export default function CareersPage() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ delay: idx * 0.05 }}
+              className="group border-b border-[var(--theme-border)] py-6 transition-all duration-300"
             >
-              <Card>
-                <div className="flex flex-col md:flex-row items-start md:items-center justify-between gap-6">
-                  <div>
-                    <h3 className="text-lg font-bold mb-2 text-[var(--theme-text-primary)]">
-                      {job.title}
-                    </h3>
-                    <div className="flex flex-wrap items-center gap-4 text-xs text-[var(--theme-text-tertiary)]">
-                      <span className="flex items-center gap-1">
-                        <Briefcase size={14} /> {job.department}
-                      </span>
-                      <span className="flex items-center gap-1">
-                        <MapPin size={14} /> {job.location}
-                      </span>
-                      <span className="flex items-center gap-1">
-                        <Calendar size={14} /> {job.type}
-                      </span>
-                    </div>
+              <div className="flex flex-col md:flex-row items-start md:items-center justify-between gap-6">
+                <div>
+                  <h3 className="text-lg font-bold mb-2 transition-colors duration-300 group-hover:text-[var(--brand-primary)]" style={{ color: "var(--theme-text-primary)" }}>
+                    {job.title}
+                  </h3>
+                  <div className="flex flex-wrap items-center gap-4 text-xs" style={{ color: "var(--theme-text-tertiary)" }}>
+                    <span className="flex items-center gap-1">
+                      <Briefcase size={14} /> {job.department}
+                    </span>
+                    <span className="flex items-center gap-1">
+                      <MapPin size={14} /> {job.location}
+                    </span>
+                    <span className="flex items-center gap-1">
+                      <Calendar size={14} /> {job.type}
+                    </span>
                   </div>
-                  <Button variant="secondary" href="/contact">
-                    Apply Now
-                  </Button>
                 </div>
-              </Card>
+                <Button variant="secondary" href="/contact" className="transition-transform group-hover:translate-x-1">
+                  Apply Now
+                </Button>
+              </div>
             </motion.div>
           ))}
         </div>

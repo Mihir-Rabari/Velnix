@@ -2,7 +2,6 @@
 
 import { motion } from "framer-motion";
 import { SectionWrapper, SectionHeader } from "@/components/ui/section-wrapper";
-import { Card } from "@/components/ui/card";
 import { Clock, User, ArrowRight } from "lucide-react";
 import Link from "next/link";
 
@@ -90,22 +89,25 @@ export default function BlogPage() {
               transition={{ delay: idx * 0.1 }}
             >
               <Link href={`/blog/${post.slug}`} className="block group h-full">
-                <Card className="h-full flex flex-col justify-between overflow-hidden">
+                <div className="flex flex-col h-full justify-between">
                   <div>
-                    {/* Header Banner */}
+                    {/* Header Banner - Standalone Rounded Visual */}
                     <div
-                      className="relative h-40 mb-6 -mx-6 -mt-6"
+                      className="relative h-44 mb-5 overflow-hidden transition-all duration-500 group-hover:scale-[1.02]"
                       style={{
                         background: `linear-gradient(135deg, ${post.color}15, ${post.color}05)`,
-                        borderBottom: `1px solid var(--theme-border)`,
+                        border: `1px solid var(--theme-border)`,
+                        borderRadius: "var(--radius-2xl)",
                       }}
                     >
                       <div className="absolute top-4 left-4">
                         <span
-                          className="text-xs font-semibold px-2.5 py-1 rounded-full"
+                          className="text-xs font-semibold px-3 py-1.5 rounded-full"
                           style={{
-                            background: `${post.color}15`,
+                            background: `${post.color}12`,
                             color: post.color,
+                            border: `1px solid ${post.color}15`,
+                            borderRadius: "var(--radius-full)",
                           }}
                         >
                           {post.category}
@@ -113,17 +115,17 @@ export default function BlogPage() {
                       </div>
                     </div>
 
-                    <h3 className="text-xl font-bold mb-3 group-hover:text-[var(--brand-primary)] transition-colors leading-snug">
+                    <h3 className="text-xl font-bold mb-3 transition-colors duration-300 group-hover:text-[var(--brand-primary)] leading-snug" style={{ color: "var(--theme-text-primary)" }}>
                       {post.title}
                     </h3>
-                    <p className="text-sm text-[var(--theme-text-secondary)] leading-relaxed mb-6">
+                    <p className="text-sm leading-relaxed mb-6" style={{ color: "var(--theme-text-secondary)" }}>
                       {post.excerpt}
                     </p>
                   </div>
 
                   <div>
                     <div className="border-t border-[var(--theme-border-subtle)] my-4" />
-                    <div className="flex items-center justify-between text-xs text-[var(--theme-text-tertiary)]">
+                    <div className="flex items-center justify-between text-xs" style={{ color: "var(--theme-text-tertiary)" }}>
                       <div className="flex items-center gap-3">
                         <span className="flex items-center gap-1">
                           <User size={12} /> {post.author}
@@ -132,10 +134,10 @@ export default function BlogPage() {
                           <Clock size={12} /> {post.readTime}
                         </span>
                       </div>
-                      <ArrowRight size={14} className="opacity-0 group-hover:opacity-100 group-hover:translate-x-1 transition-all" />
+                      <ArrowRight size={14} className="opacity-0 group-hover:opacity-100 group-hover:translate-x-1 transition-all" style={{ color: "var(--brand-primary)" }} />
                     </div>
                   </div>
-                </Card>
+                </div>
               </Link>
             </motion.div>
           ))}
