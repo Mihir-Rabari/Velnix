@@ -1,0 +1,176 @@
+"use client";
+
+import { motion } from "framer-motion";
+import { SectionWrapper, SectionHeader } from "@/components/ui/section-wrapper";
+import { Card } from "@/components/ui/card";
+import { Button } from "@/components/ui/button";
+import { MapPin, Briefcase, DollarSign, Calendar, Heart, Shield, Award } from "lucide-react";
+
+const perks = [
+  {
+    icon: <DollarSign className="w-6 h-6 text-[var(--brand-primary)]" />,
+    title: "Competitive Pay",
+    description: "Premium salaries matching global standards, plus annual performance-based profit sharing.",
+  },
+  {
+    icon: <Heart className="w-6 h-6 text-[var(--brand-primary)]" />,
+    title: "Health & Wellness",
+    description: "Full medical cover, dental packages, mental health allowances, and gym memberships.",
+  },
+  {
+    icon: <Shield className="w-6 h-6 text-[var(--brand-primary)]" />,
+    title: "Flexible Hours",
+    description: "Work remote-first with asynchronous collaboration, core sync hours, and unlimited PTO.",
+  },
+  {
+    icon: <Award className="w-6 h-6 text-[var(--brand-primary)]" />,
+    title: "Gear Allowance",
+    description: "Receive a remote setup budget of $3,000 for high-end laptops, screens, and ergonomic desks.",
+  },
+];
+
+const jobs = [
+  {
+    title: "Senior Frontend Engineer (Next.js)",
+    department: "Engineering",
+    location: "Remote (US/EU)",
+    type: "Full-Time",
+  },
+  {
+    title: "Full Stack Go/Rust Engineer",
+    department: "Engineering",
+    location: "Remote (Global)",
+    type: "Full-Time",
+  },
+  {
+    title: "Senior UI/UX Product Designer",
+    department: "Design",
+    location: "San Francisco / Hybrid",
+    type: "Full-Time",
+  },
+  {
+    title: "DevOps Infrastructure Lead",
+    department: "Operations",
+    location: "Remote (US/EU)",
+    type: "Full-Time",
+  },
+];
+
+export default function CareersPage() {
+  return (
+    <div className="pt-24">
+      {/* Intro */}
+      <SectionWrapper background="primary" padding="xl">
+        <div className="max-w-3xl mx-auto text-center">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full mb-6"
+            style={{
+              background: "var(--feature-card-icon-bg)",
+              border: "1px solid var(--border-accent)",
+              borderRadius: "var(--radius-full)",
+            }}
+          >
+            <span className="text-sm font-semibold" style={{ color: "var(--brand-primary)" }}>
+              We are hiring!
+            </span>
+          </motion.div>
+          <motion.h1
+            initial={{ opacity: 0, y: 30 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ delay: 0.1 }}
+            className="text-4xl md:text-5xl lg:text-6xl font-extrabold tracking-tight mb-6"
+          >
+            Build the future of <span className="gradient-text">software engineering</span>
+          </motion.h1>
+          <motion.p
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ delay: 0.2 }}
+            className="text-lg md:text-xl text-[var(--theme-text-secondary)]"
+          >
+            Join a remote-first team of dedicated builders, engineers, and designers obsessed with craft, layout precision, and performance.
+          </motion.p>
+        </div>
+      </SectionWrapper>
+
+      {/* Perks */}
+      <SectionWrapper background="secondary" padding="lg">
+        <SectionHeader
+          label="Why Join Us"
+          title="Designed for high performance"
+          description="We take care of our builders so they can focus entirely on creating exceptional software."
+        />
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6" style={{ gap: "var(--grid-gap)" }}>
+          {perks.map((p, idx) => (
+            <motion.div
+              key={p.title}
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ delay: idx * 0.08 }}
+            >
+              <Card className="h-full">
+                <div
+                  className="w-12 h-12 rounded-xl bg-[var(--theme-bg-secondary)] flex items-center justify-center mb-6"
+                  style={{ background: "var(--feature-card-icon-bg)" }}
+                >
+                  {p.icon}
+                </div>
+                <h3 className="text-lg font-bold mb-2">{p.title}</h3>
+                <p className="text-sm text-[var(--theme-text-secondary)] leading-relaxed">
+                  {p.description}
+                </p>
+              </Card>
+            </motion.div>
+          ))}
+        </div>
+      </SectionWrapper>
+
+      {/* Jobs */}
+      <SectionWrapper background="primary" padding="lg">
+        <SectionHeader
+          label="Open Roles"
+          title="Find your place at The Velnix"
+          description="We are always looking for curious mindsets and excellent developers. See open opportunities."
+        />
+        <div className="max-w-4xl mx-auto space-y-4">
+          {jobs.map((job, idx) => (
+            <motion.div
+              key={job.title}
+              initial={{ opacity: 0, y: 15 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ delay: idx * 0.05 }}
+            >
+              <Card>
+                <div className="flex flex-col md:flex-row items-start md:items-center justify-between gap-6">
+                  <div>
+                    <h3 className="text-lg font-bold mb-2 text-[var(--theme-text-primary)]">
+                      {job.title}
+                    </h3>
+                    <div className="flex flex-wrap items-center gap-4 text-xs text-[var(--theme-text-tertiary)]">
+                      <span className="flex items-center gap-1">
+                        <Briefcase size={14} /> {job.department}
+                      </span>
+                      <span className="flex items-center gap-1">
+                        <MapPin size={14} /> {job.location}
+                      </span>
+                      <span className="flex items-center gap-1">
+                        <Calendar size={14} /> {job.type}
+                      </span>
+                    </div>
+                  </div>
+                  <Button variant="secondary" href="/contact">
+                    Apply Now
+                  </Button>
+                </div>
+              </Card>
+            </motion.div>
+          ))}
+        </div>
+      </SectionWrapper>
+    </div>
+  );
+}
