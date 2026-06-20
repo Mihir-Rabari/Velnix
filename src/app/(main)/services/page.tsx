@@ -4,62 +4,126 @@ import { motion } from "framer-motion";
 import { SectionWrapper, SectionHeader } from "@/components/ui/section-wrapper";
 import { Button } from "@/components/ui/button";
 import {
-  Code2,
-  Globe,
+  Layers3,
+  Bot,
   Smartphone,
-  Brain,
-  Cloud,
   Palette,
-  Search,
+  Sparkles,
+  Cloud,
   Terminal,
-  Settings,
-  Activity,
-  ArrowRight,
-  ShieldAlert,
+  Target,
+  Cpu,
+  ArrowRight
 } from "lucide-react";
 
 const detailedServices = [
   {
-    id: "custom-software",
-    icon: <Code2 className="w-8 h-8 text-[var(--brand-primary)]" />,
-    title: "Custom Software Development",
-    description: "Bespoke backend systems, operational hubs, and integrations customized to your business goals. We design with performance, scalability, and security from the core.",
-    benefits: ["Customized fit for unique workflows", "Full ownership of source code", "No monthly licensing overheads", "Enterprise integrations ready"],
+    id: "saas-development",
+    icon: <Layers3 className="w-8 h-8 text-[var(--brand-primary)]" />,
+    title: "SaaS Development",
+    description: "We design and build complete software-as-a-service applications. From database architecture and multi-tenant isolation to billing flows, user authentication, and responsive dashboards, we write clean, type-safe codebases designed to handle high concurrency.",
+    benefits: [
+      "Faster time-to-market with proven boilerplates",
+      "Clean, decoupled frontend and backend architectures",
+      "Secure user data partitioning and access control",
+      "Seamless subscription billing integration"
+    ],
   },
   {
-    id: "web-development",
-    icon: <Globe className="w-8 h-8 text-[var(--brand-primary)]" />,
-    title: "Web Development & Jamstack",
-    description: "High-speed frontend solutions powered by React, Next.js, and headless CMSs. Superb rendering, rich SEO setups, and fluid motion that wows your audience.",
-    benefits: ["Vercel and Netlify optimization", "95+ Lighthouse score guaranteed", "Responsive mobile-first layouts", "Dynamic transitions"],
+    id: "ai-agents",
+    icon: <Bot className="w-8 h-8 text-[var(--brand-primary)]" />,
+    title: "AI Agents",
+    description: "We build custom AI agents that go beyond simple chatbot interfaces. We integrate large language models with tool-calling capabilities, vector databases, and memory systems to execute multi-step workflows, process raw data, and automate technical decisions.",
+    benefits: [
+      "Reduction in operational overhead for repetitive tasks",
+      "High-accuracy retrieval using advanced RAG setups",
+      "Autonomous agents capable of interacting with external APIs",
+      "Deterministic fallbacks for safety and compliance"
+    ],
   },
   {
     id: "mobile-development",
     icon: <Smartphone className="w-8 h-8 text-[var(--brand-primary)]" />,
     title: "Mobile App Development",
-    description: "Premium iOS and Android apps built via React Native and Flutter. Get the performance of native code combined with quick hybrid delivery pipelines.",
-    benefits: ["App Store & Google Play launch support", "Offline-first capability", "Push notifications & widgets", "Smooth micro-interactions"],
+    description: "We build fast, responsive mobile applications using Flutter and React Native. We focus on offline-first sync engine configurations, native module integrations, fluid animations, and clean layouts that work seamlessly across viewports.",
+    benefits: [
+      "Single codebase efficiency with native-grade performance",
+      "Robust offline caching and local database synchronization",
+      "Fast release pipelines and App Store/Google Play publishing",
+      "Smooth micro-interactions and animations"
+    ],
   },
   {
-    id: "ai-ml",
-    icon: <Brain className="w-8 h-8 text-[var(--brand-primary)]" />,
-    title: "AI & Machine Learning Integration",
-    description: "Incorporate large language models, machine learning algorithms, OCR pipelines, and conversational voice interfaces into your existing applications.",
-    benefits: ["Cognitive automation & analysis", "OpenAI, Anthropic & custom models", "Fine-tuning & RAG architectures", "Operational efficiency boost"],
-  },
-  {
-    id: "cloud",
-    icon: <Cloud className="w-8 h-8 text-[var(--brand-primary)]" />,
-    title: "Cloud & Devops Solutions",
-    description: "Highly available, auto-scaling architectures designed on AWS, GCP, and Azure. Fully managed pipelines with Docker, Kubernetes, and Terraform.",
-    benefits: ["Infrastructure as Code (IaC)", "Proactive cost containment", "Continuous deployment setups", "Comprehensive logging & metrics"],
-  },
-  {
-    id: "design",
+    id: "ui-ux-design",
     icon: <Palette className="w-8 h-8 text-[var(--brand-primary)]" />,
-    title: "UI/UX & Design Systems",
-    description: "Outstanding, premium designs and interactive prototypes crafted to wow visitors. Complete with structured components for seamless engineering integration.",
-    benefits: ["User-centric research", "Interactive Figma prototypes", "Scalable UI component libraries", "Premium light/dark themes"],
+    title: "UI/UX Design",
+    description: "We design product interfaces focusing on user flows, interaction logic, visual hierarchy, and developer handoff. We build comprehensive, tokenized design systems in Figma that match your production codebase components, eliminating design-to-engineering friction.",
+    benefits: [
+      "Intuitive user flows that lower user friction",
+      "Design tokens mapped directly to code",
+      "High-fidelity interactive Figma prototypes",
+      "Complete design system coverage for all edge states"
+    ],
+  },
+  {
+    id: "branding",
+    icon: <Sparkles className="w-8 h-8 text-[var(--brand-primary)]" />,
+    title: "Branding",
+    description: "We define how your product looks and feels. We build minimal, premium, and engineering-forward brand identities, covering logo designs, curated color systems, custom typography, asset libraries, and digital guidelines that position you as an industry leader.",
+    benefits: [
+      "Cohesive visual narrative across web, app, and docs",
+      "Clean, premium brand positioning that builds trust",
+      "Vector-perfect assets ready for modern layouts",
+      "Clear identity documentation for future scaling"
+    ],
+  },
+  {
+    id: "devops-infrastructure",
+    icon: <Cloud className="w-8 h-8 text-[var(--brand-primary)]" />,
+    title: "DevOps & Cloud Infrastructure",
+    description: "We architect and deploy cloud infrastructure using Infrastructure as Code (IaC). We set up automated CI/CD pipelines, container orchestration, log routing, metrics collectors, and multi-region failover setups that ensure your application runs with 99.9% uptime.",
+    benefits: [
+      "Zero-downtime rolling deployments",
+      "Infrastructure defined entirely in code (Terraform)",
+      "Automated scaling based on CPU, memory, or network load",
+      "Comprehensive logging and tracing for rapid debugging"
+    ],
+  },
+  {
+    id: "cto-as-a-service",
+    icon: <Terminal className="w-8 h-8 text-[var(--brand-primary)]" />,
+    title: "CTO-as-a-Service",
+    description: "Get fractional CTO access to guide your technical roadmap. We help you make core architectural decisions, design database schemas, evaluate security standards, manage technical debt, hire engineers, and establish high-throughput development workflows.",
+    benefits: [
+      "Avoid costly architectural mistakes early in development",
+      "Clear tech stack vetting aligned with business goals",
+      "Structured technical hiring and vetting pipelines",
+      "Executive technical representation for investor calls"
+    ],
+  },
+  {
+    id: "product-strategy",
+    icon: <Target className="w-8 h-8 text-[var(--brand-primary)]" />,
+    title: "Product Strategy",
+    description: "We help you define what to build, what to defer, and how to execute. We translate high-level business goals into a structured technical backlog, defining user stories, feature specs, database entity relations, and step-by-step milestones to keep execution fast.",
+    benefits: [
+      "Clear backlog priorities that eliminate wasted developer hours",
+      "Thoroughly defined milestones that align with launch targets",
+      "Deep technical vetting of product feature feasibility",
+      "Granular sprint schedules and backlog documentation"
+    ],
+  },
+  {
+    id: "automation-systems",
+    icon: <Cpu className="w-8 h-8 text-[var(--brand-primary)]" />,
+    title: "Automation Systems",
+    description: "We eliminate manual operational bottlenecks. We build custom API integrations, scheduled cron synchronizers, webhook routers, scraper engines, and internal dashboard tools that sync data across your CRM, inventory system, and database.",
+    benefits: [
+      "Elimination of manual data entry errors",
+      "Real-time syncing between database systems",
+      "Automated reporting and alerting via Slack/Email",
+      "Scalable webhook ingestion systems"
+    ],
   },
 ];
 
@@ -79,7 +143,7 @@ const pricingApproaches = [
   {
     title: "Dedicated Team",
     price: "Monthly Retainer",
-    description: "Your own full-time product team: designer, lead developer, QA, and project manager. Scaled for long-term projects.",
+    description: "Your own full-time product team: designer, lead developer, QA, and product manager. Scaled for long-term projects.",
     features: ["100% focused on your product", "Daily standups and communication", "Full integration with your tools", "Continuous code delivery"],
   },
 ];

@@ -58,7 +58,7 @@ export default function SolutionsPage() {
             }}
           >
             <span className="text-sm font-semibold" style={{ color: "var(--brand-primary)" }}>
-              Our Solutions
+              Our Blueprints
             </span>
           </motion.div>
           <motion.h1
@@ -67,7 +67,7 @@ export default function SolutionsPage() {
             transition={{ delay: 0.1 }}
             className="text-3xl md:text-4xl lg:text-5xl font-extrabold tracking-tight mb-4"
           >
-            Engineered for <span className="gradient-text">scale and growth</span>
+            Engineered blueprints for <span className="gradient-text">scale and speed</span>
           </motion.h1>
           <motion.p
             initial={{ opacity: 0, y: 20 }}
@@ -75,7 +75,7 @@ export default function SolutionsPage() {
             transition={{ delay: 0.2 }}
             className="text-base md:text-lg text-[var(--theme-text-secondary)]"
           >
-            Whether you are a fast-growing startup, building a modern SaaS platform, or digitizing complex enterprise operations, we have standard blueprints ready.
+            We don&apos;t start from scratch. We bring standard architectural blueprints for common systems (SaaS databases, RAG indices, and DevOps pipelines) to speed up technical execution.
           </motion.p>
         </div>
       </SectionWrapper>

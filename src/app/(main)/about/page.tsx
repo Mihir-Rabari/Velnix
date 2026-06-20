@@ -2,48 +2,80 @@
 
 import { motion } from "framer-motion";
 import { SectionWrapper, SectionHeader } from "@/components/ui/section-wrapper";
-import { Shield, Target, Eye, Users } from "lucide-react";
+import { Target, Cpu, ShieldCheck, Paintbrush } from "lucide-react";
 
 const values = [
   {
     icon: <Target className="w-6 h-6 text-[var(--brand-primary)]" />,
-    title: "Mission-Driven",
-    description: "To engineer exceptional digital experiences that empower organizations to scale, innovate, and lead their industries.",
+    title: "Product-Focused Execution",
+    description: "We treat your project like our own. We focus on building what is necessary for your users to succeed, prioritizing execution speed and launch velocity.",
   },
   {
-    icon: <Eye className="w-6 h-6 text-[var(--brand-primary)]" />,
-    title: "Our Vision",
-    description: "To be the global benchmark for premium software engineering, recognized for design elegance and technical excellence.",
+    icon: <Cpu className="w-6 h-6 text-[var(--brand-primary)]" />,
+    title: "Engineering Craftsmanship",
+    description: "We write clean, type-safe, and scalable code. Our databases are normalized, our API layers are fast, and our deployments are fully automated.",
   },
   {
-    icon: <Shield className="w-6 h-6 text-[var(--brand-primary)]" />,
-    title: "Trust & Transparency",
-    description: "We believe in clear communication, honest timelines, complete ownership of our code, and long-term partnerships.",
+    icon: <ShieldCheck className="w-6 h-6 text-[var(--brand-primary)]" />,
+    title: "Trust & Extreme Transparency",
+    description: "You see working software every week. We share GitHub repositories, Figma workspaces, and Slack channels. No big reveals, no surprises.",
   },
   {
-    icon: <Users className="w-6 h-6 text-[var(--brand-primary)]" />,
-    title: "Human-Centric Design",
-    description: "Technology is for people. We design and build systems that prioritize usability, accessibility, and delight.",
+    icon: <Paintbrush className="w-6 h-6 text-[var(--brand-primary)]" />,
+    title: "Design Precision",
+    description: "We build interfaces that look premium and function smoothly. Our designs bridge the gap from Figma tokens to clean web CSS.",
   },
 ];
 
 const team = [
-  { name: "Alex Mercer", role: "CEO & Founder", image: "AM", bio: "Former Tech Lead at Stripe. Passionate about software architecture and product design." },
-  { name: "Elena Rostova", role: "VP of Engineering", image: "ER", bio: "Ex-Google Senior Staff Engineer. Distributed systems specialist and open-source contributor." },
-  { name: "Marcus Vance", role: "Head of Design", image: "MV", bio: "Award-winning designer. Formerly lead designer at Figma and Apple." },
-  { name: "Sarah Jenkins", role: "Head of AI Research", image: "SJ", bio: "Ph.D. in Computer Science from Stanford. Focuses on NLP and neural network optimizations." },
+  {
+    name: "Mihir Rabari",
+    role: "Engineering • Product • Infrastructure",
+    image: "MR",
+    bio: "Builder focused on software systems, AI products, developer tools, automation platforms, and scalable infrastructure. Passionate about turning complex ideas into products people actually use.",
+  },
+  {
+    name: "Khushi Trivedi",
+    role: "Operations • Growth • Partnerships",
+    image: "KT",
+    bio: "Focused on operations, partnerships, business development, and helping products grow from early concepts into sustainable businesses.",
+  },
+  {
+    name: "Khushi Patel",
+    role: "UI/UX • Branding • Design Systems",
+    image: "KP",
+    bio: "Creates intuitive user experiences, design systems, visual identities, and product interfaces that connect user needs with business goals.",
+  },
+  {
+    name: "Aangi Shah",
+    role: "Product Design • Frontend Experience",
+    image: "AS",
+    bio: "Designs modern digital experiences with a strong focus on usability, product thinking, visual consistency, and frontend collaboration.",
+  },
+  {
+    name: "Karan Mistry",
+    role: "AI • Machine Learning • RAG Systems",
+    image: "KM",
+    bio: "Works on AI systems, machine learning pipelines, retrieval architectures, and intelligent applications that automate decision-making and unlock new product capabilities.",
+  },
+  {
+    name: "Jignesh Prajapati",
+    role: "Flutter • Mobile Applications",
+    image: "JP",
+    bio: "Builds cross-platform mobile applications focused on performance, usability, and scalable user experiences.",
+  },
 ];
 
 export default function AboutPage() {
   return (
     <div className="pt-24">
       {/* Intro */}
-      <SectionWrapper background="primary" padding="sm">
+      <SectionWrapper background="primary" padding="xl">
         <div className="max-w-3xl mx-auto text-center">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
-            className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full mb-4"
+            className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full mb-6"
             style={{
               background: "var(--feature-card-icon-bg)",
               border: "1px solid var(--border-accent)",
@@ -58,17 +90,17 @@ export default function AboutPage() {
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.1 }}
-            className="text-3xl md:text-4xl lg:text-5xl font-extrabold tracking-tight mb-4"
+            className="text-4xl md:text-5xl lg:text-6xl font-extrabold tracking-tight mb-6"
           >
-            We are architects of the <span className="gradient-text">digital frontier</span>
+            We are a team of <span className="gradient-text">software builders</span>
           </motion.h1>
           <motion.p
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.2 }}
-            className="text-base md:text-lg text-[var(--theme-text-secondary)] leading-relaxed"
+            className="text-lg md:text-xl text-[var(--theme-text-secondary)] leading-relaxed"
           >
-            Founded in 2018, The Velnix has grown from a boutique agency into a premium global engineering and design partner. We help ambitious startups and established enterprises turn complex challenges into simple, beautiful software.
+            The Velnix is a modern, engineering-first studio. We help ambitious founders and businesses build digital products that scale. We do not operate like a traditional software agency. We don't employ account managers or slide creators. You work directly with the developers and designers building your software.
           </motion.p>
         </div>
       </SectionWrapper>
@@ -110,11 +142,11 @@ export default function AboutPage() {
       {/* Team */}
       <SectionWrapper background="primary" padding="lg">
         <SectionHeader
-          label="Leadership Team"
-          title="Engineers, designers, innovators"
-          description="Meet the leaders driving technical excellence and elegant designs at The Velnix."
+          label="The Builders"
+          title="Engineers, designers, specialists"
+          description="Meet the core execution team behind Velnix products."
         />
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 gap-y-12 max-w-6xl mx-auto">
           {team.map((member, idx) => (
             <motion.div
               key={member.name}
@@ -122,11 +154,11 @@ export default function AboutPage() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ delay: idx * 0.08 }}
-              className="group flex flex-col items-center text-center"
+              className="group flex flex-col items-center text-center p-6 rounded-2xl border border-[var(--theme-border-subtle)] bg-[var(--theme-bg-secondary)]/10"
             >
               <div className="relative mb-6">
                 <div
-                  className="w-24 h-24 rounded-full flex items-center justify-center text-2xl font-bold text-white transition-transform duration-500 group-hover:scale-105 group-hover:rotate-[3deg]"
+                  className="w-20 h-20 rounded-full flex items-center justify-center text-xl font-bold text-white transition-transform duration-500 group-hover:scale-105 group-hover:rotate-[3deg]"
                   style={{
                     background: "var(--gradient-brand)",
                     boxShadow: "var(--shadow-glow-brand)",
@@ -138,7 +170,7 @@ export default function AboutPage() {
               <h3 className="text-lg font-bold mb-1 transition-colors duration-300 group-hover:text-[var(--brand-primary)]">
                 {member.name}
               </h3>
-              <span className="text-sm font-semibold mb-3 block" style={{ color: "var(--brand-primary)" }}>
+              <span className="text-xs font-semibold mb-3 block" style={{ color: "var(--brand-primary)" }}>
                 {member.role}
               </span>
               <p className="text-sm leading-relaxed" style={{ color: "var(--theme-text-secondary)" }}>

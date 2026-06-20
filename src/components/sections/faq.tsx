@@ -7,29 +7,24 @@ import { SectionWrapper, SectionHeader } from "@/components/ui/section-wrapper";
 
 const faqs = [
   {
-    question: "How long does a typical project take?",
+    question: "How is The Velnix different from a typical software agency?",
     answer:
-      "It depends on scope. A marketing site might take 4-6 weeks. A full SaaS product is usually 3-6 months. We'll give you a realistic timeline after our first conversation — no guessing.",
+      "Traditional agencies rely on project managers, account executives, and slides. At The Velnix, you work directly with senior engineers and designers. We do not inflate scopes. We write code, push to GitHub, and deploy weekly.",
   },
   {
-    question: "What does pricing look like?",
+    question: "Who will build my product?",
     answer:
-      "We offer fixed-price and time-and-materials engagements. Most projects fall between $25K–$250K depending on complexity. We're upfront about costs — you'll get a detailed estimate before we start.",
+      "Your product will be built directly by our core team of specialists: Mihir Rabari (Systems & Infrastructure), Khushi Patel & Aangi Shah (UI/UX & Product Design), Karan Mistry (AI & RAG Systems), Jignesh Prajapati (Mobile Applications), and Khushi Trivedi (Operations & Growth).",
   },
   {
-    question: "Do you handle maintenance after launch?",
+    question: "What is your development process like?",
     answer:
-      "Yes. We offer ongoing support plans that include monitoring, bug fixes, performance tuning, and feature work. Most clients stay with us long after launch.",
+      "We work in agile, bi-weekly sprints. We provide you with access to our GitHub repository, Figma files, and a staging URL where you can test live changes. We communicate daily in a shared Slack channel.",
   },
   {
-    question: "Can you work with our existing team?",
+    question: "Do you help with database migration or scaling?",
     answer:
-      "Absolutely. We frequently embed engineers with existing teams. We adapt to your tools, your workflows, and your cadence — Scrum, Kanban, whatever works.",
-  },
-  {
-    question: "How do we get started?",
-    answer:
-      "Reach out through our contact form or email us directly. We'll set up a 30-minute call to understand your needs, then follow up with a proposal within a week. No commitment, no pressure.",
+      "Yes. We design database schemas, configure multi-tenant isolation, optimize query performance, set up connection poolers, and build automated CI/CD pipelines to ensure seamless scaling.",
   },
 ];
 

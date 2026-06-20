@@ -4,7 +4,7 @@ import Link from "next/link";
 import { motion } from "framer-motion";
 import { ArrowRight, Check, Code2, Layers3, ShieldCheck } from "lucide-react";
 
-const capabilities = ["Product strategy", "UX and UI design", "Full-stack engineering"];
+const capabilities = ["SaaS development", "AI agents & RAG systems", "Mobile applications", "DevOps & cloud infrastructure"];
 
 export function HeroSection() {
   return (
@@ -21,25 +21,25 @@ export function HeroSection() {
         >
           <div className="mb-8 flex items-center gap-3 text-xs font-semibold uppercase tracking-[0.18em] text-[var(--brand-primary)]">
             <span className="h-px w-8 bg-current" />
-            Independent software studio
+            The Velnix Studio
           </div>
 
           <h1 className="max-w-4xl text-5xl font-semibold leading-[0.98] tracking-[-0.055em] text-[var(--theme-text-primary)] sm:text-6xl lg:text-[5.25rem]">
-            Software that moves your business
-            <span className="font-display ml-3 font-normal text-[var(--brand-primary)]">forward.</span>
+            We build software products <br />
+            from idea to <span className="font-display font-normal text-[var(--brand-primary)]">production.</span>
           </h1>
 
           <p className="mt-8 max-w-2xl text-lg leading-8 text-[var(--theme-text-secondary)] md:text-xl">
-            We partner with ambitious teams to design and engineer dependable digital products, from first idea to production and beyond.
+            An AI-Native Product & Engineering Studio. We design, code, and deploy SaaS platforms, custom AI systems, and mobile applications with an obsession for speed, design precision, and clean code.
           </p>
 
           <div className="mt-10 flex flex-col gap-4 sm:flex-row">
-            <Link href="/get-quote" className="group inline-flex items-center justify-center gap-3 rounded-lg bg-[var(--brand-primary)] px-6 py-3.5 text-sm font-semibold text-[#001A23] transition-transform hover:-translate-y-0.5">
-              Start a project
+            <Link href="/contact" className="group inline-flex items-center justify-center gap-3 rounded-lg bg-[var(--brand-primary)] px-6 py-3.5 text-sm font-semibold text-[#001A23] transition-transform hover:-translate-y-0.5">
+              Get in touch
               <ArrowRight size={17} className="transition-transform group-hover:translate-x-1" />
             </Link>
             <Link href="/portfolio" className="inline-flex items-center justify-center rounded-lg border border-[var(--theme-border)] px-6 py-3.5 text-sm font-semibold text-[var(--theme-text-primary)] transition-colors hover:bg-[var(--theme-surface-hover)]">
-              See our work
+              View our work
             </Link>
           </div>
 

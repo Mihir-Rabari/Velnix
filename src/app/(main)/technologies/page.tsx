@@ -69,7 +69,7 @@ export default function TechnologiesPage() {
             transition={{ delay: 0.1 }}
             className="text-3xl md:text-4xl lg:text-5xl font-extrabold tracking-tight mb-4"
           >
-            Built on <span className="gradient-text">state of the art</span> tools
+            Built on <span className="gradient-text">production-proven</span> technology
           </motion.h1>
           <motion.p
             initial={{ opacity: 0, y: 20 }}
@@ -77,7 +77,7 @@ export default function TechnologiesPage() {
             transition={{ delay: 0.2 }}
             className="text-base md:text-lg text-[var(--theme-text-secondary)]"
           >
-            We don&apos;t compromise on developer tools, system libraries, or deployment servers. Discover our tech guidelines.
+            We select tools based on type safety, community backing, performance under load, and developer speed. Here is what we use to build.
           </motion.p>
         </div>
       </SectionWrapper>

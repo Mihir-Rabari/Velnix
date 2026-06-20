@@ -7,24 +7,24 @@ import { MapPin, Briefcase, DollarSign, Calendar, Heart, Shield, Award } from "l
 
 const perks = [
   {
-    icon: <DollarSign className="w-6 h-6 text-[var(--brand-primary)]" />,
-    title: "Competitive Pay",
-    description: "Premium salaries matching global standards, plus annual performance-based profit sharing.",
-  },
-  {
-    icon: <Heart className="w-6 h-6 text-[var(--brand-primary)]" />,
-    title: "Health & Wellness",
-    description: "Full medical cover, dental packages, mental health allowances, and gym memberships.",
-  },
-  {
     icon: <Shield className="w-6 h-6 text-[var(--brand-primary)]" />,
-    title: "Flexible Hours",
-    description: "Work remote-first with asynchronous collaboration, core sync hours, and unlimited PTO.",
+    title: "High Autonomy",
+    description: "Work asynchronously with clear goals, minimal meetings, and full ownership of your domain.",
   },
   {
     icon: <Award className="w-6 h-6 text-[var(--brand-primary)]" />,
-    title: "Gear Allowance",
-    description: "Receive a remote setup budget of $3,000 for high-end laptops, screens, and ergonomic desks.",
+    title: "Modern Tooling",
+    description: "Access to state-of-the-art developer tools, top-tier SaaS subscriptions, and clean setups.",
+  },
+  {
+    icon: <Heart className="w-6 h-6 text-[var(--brand-primary)]" />,
+    title: "Professional Growth",
+    description: "Work directly on high-performance infrastructure, advanced AI pipelines, and premium design products.",
+  },
+  {
+    icon: <DollarSign className="w-6 h-6 text-[var(--brand-primary)]" />,
+    title: "Competitive Compensation",
+    description: "Attractive compensation structures matching global industry benchmarks for senior engineering talent.",
   },
 ];
 
@@ -72,7 +72,7 @@ export default function CareersPage() {
             }}
           >
             <span className="text-sm font-semibold" style={{ color: "var(--brand-primary)" }}>
-              We are hiring!
+              Build with us
             </span>
           </motion.div>
           <motion.h1
@@ -81,7 +81,7 @@ export default function CareersPage() {
             transition={{ delay: 0.1 }}
             className="text-3xl md:text-4xl lg:text-5xl font-extrabold tracking-tight mb-4"
           >
-            Build the future of <span className="gradient-text">software engineering</span>
+            Join a team of <span className="gradient-text">senior builders</span>
           </motion.h1>
           <motion.p
             initial={{ opacity: 0, y: 20 }}
@@ -89,7 +89,7 @@ export default function CareersPage() {
             transition={{ delay: 0.2 }}
             className="text-base md:text-lg text-[var(--theme-text-secondary)]"
           >
-            Join a remote-first team of dedicated builders, engineers, and designers obsessed with craft, layout precision, and performance.
+            We are a remote-first team of dedicated engineers and designers obsessed with layout precision, performance, and technical challenge. We don&apos;t care about credentials — we care about execution.
           </motion.p>
         </div>
       </SectionWrapper>

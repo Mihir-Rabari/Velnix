@@ -5,32 +5,25 @@ import { SectionWrapper, SectionHeader } from "@/components/ui/section-wrapper";
 
 const reasons = [
   {
-    metric: "97%",
-    metricLabel: "on-time delivery",
-    title: "We ship when we say we will",
+    metric: "Weekly",
+    metricLabel: "Demos & Releases",
+    title: "We ship working software, not PowerPoints",
     description:
-      "Transparent timelines, milestone tracking, and honest updates. We don't overpromise — we build in buffer and deliver on schedule.",
+      "Transparent milestones and continuous delivery. We build with automated staging pipelines so you can test real code every week, not slides decks.",
   },
   {
-    metric: "143",
-    metricLabel: "projects completed",
-    title: "We've done this before",
+    metric: "Direct",
+    metricLabel: "Slack & GitHub Access",
+    title: "We are builders working for builders",
     description:
-      "Across startups, scale-ups, and enterprises — from fintech to healthcare to e-commerce. We bring cross-industry perspective to every engagement.",
-  },
-  {
-    metric: "<2h",
-    metricLabel: "avg response time",
-    title: "You'll always know what's happening",
-    description:
-      "Dedicated Slack channel, weekly demos, direct access to your engineering lead. No account managers playing telephone.",
+      "No account managers playing telephone. You collaborate directly with senior engineers and product designers in shared Slack rooms and Linear backlogs.",
   },
   {
     metric: "99.9%",
-    metricLabel: "uptime SLA",
+    metricLabel: "Platform Uptime SLA",
     title: "We don't disappear after launch",
     description:
-      "24/7 monitoring, proactive maintenance, and ongoing support. Your product keeps running smoothly while you focus on growth.",
+      "Comprehensive telemetry, error monitoring, and post-launch SLA maintenance. We make sure your codebase and servers scale smoothly as you grow.",
   },
 ];
 
@@ -40,8 +33,8 @@ export function WhyChooseUsSection() {
       <SectionHeader
         variant="default"
         label="Why us"
-        title={`What makes working with us ${String.fromCharCode(8203)}different`}
-        description="We're a small, senior team that treats your project like our own product. No juniors learning on your dime."
+        title="Senior builders only. No overhead."
+        description="We operate as a product partner and technical execution team. We focus on shipping products, not selling PowerPoints."
       />
 
       <div className="grid grid-cols-1 md:grid-cols-2 gap-x-16 gap-y-16 max-w-5xl mx-auto mt-12">

@@ -8,7 +8,17 @@ import { CheckCircle, ArrowRight, Sparkles } from "lucide-react";
 
 const budgets = ["Under $20k", "$20k - $50k", "$50k - $100k", "$100k+"];
 const timelines = ["Under 1 month", "1-3 months", "3-6 months", "6+ months"];
-const services = ["Web Development", "Mobile Apps", "AI & ML Integration", "Custom Software", "Cloud Solutions", "UIUX Design"];
+const services = [
+  "SaaS Development",
+  "AI Agents",
+  "Mobile App Development",
+  "UI/UX Design",
+  "Branding",
+  "DevOps & Cloud Infrastructure",
+  "CTO-as-a-Service",
+  "Product Strategy",
+  "Automation Systems",
+];
 
 export default function GetQuotePage() {
   const [form, setForm] = useState({

@@ -1,0 +1,544 @@
+{
+  "company": {
+    "name": "The Velnix",
+    "tagline": "From Idea to Production.",
+    "positioning": "AI-Native Product & Engineering Studio",
+    "description": "We help startups and businesses design, build, launch, and scale software products, AI systems, mobile applications, and digital brands. We operate as a product partner and technical execution team, not a traditional outsourcing agency."
+  },
+  "targetClients": [
+    "Startup founders",
+    "Early-stage startups",
+    "Funded startups",
+    "SMBs",
+    "Product teams",
+    "Businesses adopting AI",
+    "Companies building internal tools",
+    "Teams looking for technical execution"
+  ],
+  "services": [
+    {
+      "id": "saas-development",
+      "title": "SaaS Development",
+      "shortDescription": "Full-stack multi-tenant web products built to scale.",
+      "longDescription": "We design and build complete software-as-a-service applications. From database architecture and multi-tenant isolation to billing flows, user authentication, and responsive dashboards, we write clean, type-safe codebases designed to handle high concurrency.",
+      "benefits": [
+        "Faster time-to-market with proven boilerplates",
+        "Clean, decoupled frontend and backend architectures",
+        "Secure user data partitioning and access control",
+        "Seamless subscription billing integration"
+      ],
+      "deliverables": [
+        "Production-ready Next.js / TypeScript repository",
+        "Multi-tenant database schema (PostgreSQL)",
+        "Stripe integration for subscription management",
+        "Automated unit and integration test suites"
+      ],
+      "idealClient": "SaaS founders needing a robust MVP or scaling an existing web application.",
+      "technologies": ["Next.js", "TypeScript", "Node.js", "PostgreSQL", "Stripe", "Tailwind CSS"]
+    },
+    {
+      "id": "ai-agents",
+      "title": "AI Agents",
+      "shortDescription": "Intelligent agentic workflows automating complex business operations.",
+      "longDescription": "We build custom AI agents that go beyond simple chatbot interfaces. We integrate large language models with tool-calling capabilities, vector databases, and memory systems to execute multi-step workflows, process raw data, and automate technical decisions.",
+      "benefits": [
+        "Reduction in operational overhead for repetitive tasks",
+        "High-accuracy retrieval using advanced RAG setups",
+        "Autonomous agents capable of interacting with external APIs",
+        "Deterministic fallbacks for safety and compliance"
+      ],
+      "deliverables": [
+        "AI agent workflow engine and API endpoints",
+        "Vector database indexing pipeline (Supabase / PGVector)",
+        "Prompt engineering and model evaluation logs",
+        "Admin monitoring dashboard for agent execution traces"
+      ],
+      "idealClient": "Product teams looking to automate internal operations or embed agentic workflows into their products.",
+      "technologies": ["Python", "OpenAI API", "LangChain", "Supabase", "LangGraph", "FastAPI"]
+    },
+    {
+      "id": "mobile-app-development",
+      "title": "Mobile App Development",
+      "shortDescription": "High-performance cross-platform iOS and Android apps.",
+      "longDescription": "We build fast, responsive mobile applications using Flutter and React Native. We focus on offline-first sync engine configurations, native module integrations, fluid animations, and clean layouts that work seamlessly across viewports.",
+      "benefits": [
+        "Single codebase efficiency with native-grade performance",
+        "Robust offline caching and local database synchronization",
+        "Fast release pipelines and App Store/Google Play publishing",
+        "Smooth micro-interactions and animations"
+      ],
+      "deliverables": [
+        "Cross-platform Flutter / React Native source code",
+        "App Store and Google Play console setup and deployment",
+        "Offline-first synchronization layer",
+        "Push notification system integration"
+      ],
+      "idealClient": "Startups requiring high-fidelity mobile experiences delivered on short timelines.",
+      "technologies": ["Flutter", "React Native", "SQLite", "Firebase", "TypeScript", "Dart"]
+    },
+    {
+      "id": "ui-ux-design",
+      "title": "UI/UX Design",
+      "shortDescription": "Interface design systems bridging the gap between design and code.",
+      "longDescription": "We design product interfaces focusing on user flows, interaction logic, visual hierarchy, and developer handoff. We build comprehensive, tokenized design systems in Figma that match your production codebase components, eliminating design-to-engineering friction.",
+      "benefits": [
+        "Intuitive user flows that lower user friction",
+        "Design tokens (colors, spacing, typography) mapped directly to code",
+        "High-fidelity interactive Figma prototypes",
+        "Complete design system coverage for all edge states"
+      ],
+      "deliverables": [
+        "Interactive Figma workspace files",
+        "Design tokens JSON export for frontend integration",
+        "Responsive layout wireframes and user flow maps",
+        "Component-based UI design library"
+      ],
+      "idealClient": "Founders who need a clean, premium visual direction and structured layouts before coding starts.",
+      "technologies": ["Figma", "Design Tokens", "Tailwind CSS Specs"]
+    },
+    {
+      "id": "branding",
+      "title": "Branding",
+      "shortDescription": "Technical, premium, and minimal visual identities for digital products.",
+      "longDescription": "We define how your product looks and feels. We build minimal, premium, and engineering-forward brand identities, covering logo designs, curated color systems, custom typography, asset libraries, and digital guidelines that position you as an industry leader.",
+      "benefits": [
+        "Cohesive visual narrative across web, app, and docs",
+        "Clean, premium brand positioning that builds trust",
+        "Vector-perfect assets ready for modern layout designs",
+        "Clear identity documentation for future scaling"
+      ],
+      "deliverables": [
+        "Vector logo system (SVG formats)",
+        "Brand style guide (color palettes, typography scale)",
+        "Custom asset illustrations and social banners",
+        "Font package and visual asset inventory"
+      ],
+      "idealClient": "Startups and technical companies looking to establish a highly professional, developer-friendly brand presence.",
+      "technologies": ["Figma", "Adobe Illustrator", "SVG Systems"]
+    },
+    {
+      "id": "devops-infrastructure",
+      "title": "DevOps & Cloud Infrastructure",
+      "shortDescription": "Automated, scalable, and secure multi-cloud architectures.",
+      "longDescription": "We architect and deploy cloud infrastructure using Infrastructure as Code (IaC). We set up automated CI/CD pipelines, container orchestration, log routing, metrics collectors, and multi-region failover setups that ensure your application runs with 99.9% uptime.",
+      "benefits": [
+        "Zero-downtime rolling deployments",
+        "Infrastructure defined entirely in code for easy tracking",
+        "Automated scaling based on CPU, memory, or network load",
+        "Comprehensive logging and tracing for rapid debugging"
+      ],
+      "deliverables": [
+        "Terraform configuration files for cloud provisioning",
+        "CI/CD workflow YAML configs (GitHub Actions / GitLab)",
+        "Dockerized container setup and Kubernetes manifests",
+        "Prometheus/Grafana logging and alert dashboards"
+      ],
+      "idealClient": "Companies scaling past single-server setups that require industrial-grade DevOps management.",
+      "technologies": ["AWS", "GCP", "Terraform", "Docker", "Kubernetes", "GitHub Actions"]
+    },
+    {
+      "id": "cto-as-a-service",
+      "title": "CTO-as-a-Service",
+      "shortDescription": "Strategic technical leadership and system architecture consulting.",
+      "longDescription": "Get fractional CTO access to guide your technical roadmap. We help you make core architectural decisions, design database schemas, evaluate security standards, manage technical debt, hire engineers, and establish high-throughput development workflows.",
+      "benefits": [
+        "Avoid costly architectural mistakes early in development",
+        "Clear tech stack vetting aligned with business goals",
+        "Structured technical hiring and vetting pipelines",
+        "Executive technical representation for investor calls"
+      ],
+      "deliverables": [
+        "System architecture specification documents",
+        "Engineering hiring rubrics and interview templates",
+        "Technical roadmap, risk matrix, and dependency graphs",
+        "Weekly architectural review sync calls"
+      ],
+      "idealClient": "Non-technical founders or early-stage startups needing senior engineering leadership without the full-time cost.",
+      "technologies": ["System Design", "Cloud Architecture Standards", "Security Auditing"]
+    },
+    {
+      "id": "product-strategy",
+      "title": "Product Strategy",
+      "shortDescription": "Scoping, roadmap development, and functional feature definition.",
+      "longDescription": "We help you define what to build, what to defer, and how to execute. We translate high-level business goals into a structured technical backlog, defining user stories, feature specs, database entity relations, and step-by-step milestones to keep execution fast.",
+      "benefits": [
+        "Clear backlog priorities that eliminate wasted developer hours",
+        "Thoroughly defined milestones that align with launch targets",
+        "Deep technical vetting of product feature feasibility",
+        "Granular sprint schedules and backlog documentation"
+      ],
+      "deliverables": [
+        "Product Requirement Documents (PRDs) and specs",
+        "Structured backlog roadmap in Jira / Linear",
+        "Entity Relationship Diagrams (ERDs) and core user flows",
+        "MVP feature prioritization matrix"
+      ],
+      "idealClient": "Founders wanting a tight, execution-focused product roadmap to guide internal teams or partners.",
+      "technologies": ["Linear", "Mermaid.js", "Product Backlog Frameworks"]
+    },
+    {
+      "id": "automation-systems",
+      "title": "Automation Systems",
+      "shortDescription": "Custom scripting, data synchronizers, and automated workflows.",
+      "longDescription": "We eliminate manual operational bottlenecks. We build custom API integrations, scheduled cron synchronizers, webhook routers, scraper engines, and internal dashboard tools that sync data across your CRM, inventory system, and database.",
+      "benefits": [
+        "Elimination of manual data entry errors",
+        "Real-time syncing between disparate database systems",
+        "Automated reporting and alerting via Slack or Email",
+        "Scalable webhook ingestion systems"
+      ],
+      "deliverables": [
+        "Custom workflow automation repository",
+        "Third-party API webhook ingestion router",
+        "Scheduled crawler/synchronizer scripts",
+        "Automated alerting and telemetry configurations"
+      ],
+      "idealClient": "SMBs and product teams looking to automate manual workflows and connect siloed software tools.",
+      "technologies": ["Node.js", "Python", "Webhooks", "FastAPI", "CRON", "Slack API"]
+    }
+  ],
+  "team": [
+    {
+      "name": "Mihir Rabari",
+      "role": "Engineering • Product • Infrastructure",
+      "image": "MR",
+      "bio": "Builder focused on software systems, AI products, developer tools, automation platforms, and scalable infrastructure. Passionate about turning complex ideas into products people actually use."
+    },
+    {
+      "name": "Khushi Trivedi",
+      "role": "Operations • Growth • Partnerships",
+      "image": "KT",
+      "bio": "Focused on operations, partnerships, business development, and helping products grow from early concepts into sustainable businesses."
+    },
+    {
+      "name": "Khushi Patel",
+      "role": "UI/UX • Branding • Design Systems",
+      "image": "KP",
+      "bio": "Creates intuitive user experiences, design systems, visual identities, and product interfaces that connect user needs with business goals."
+    },
+    {
+      "name": "Aangi Shah",
+      "role": "Product Design • Frontend Experience",
+      "image": "AS",
+      "bio": "Designs modern digital experiences with a strong focus on usability, product thinking, visual consistency, and frontend collaboration."
+    },
+    {
+      "name": "Karan Mistry",
+      "role": "AI • Machine Learning • RAG Systems",
+      "image": "KM",
+      "bio": "Works on AI systems, machine learning pipelines, retrieval architectures, and intelligent applications that automate decision-making and unlock new product capabilities."
+    },
+    {
+      "name": "Jignesh Prajapati",
+      "role": "Flutter • Mobile Applications",
+      "image": "JP",
+      "bio": "Builds cross-platform mobile applications focused on performance, usability, and scalable user experiences."
+    }
+  ],
+  "portfolio": [
+    {
+      "id": "inboxfm",
+      "title": "InboxFM",
+      "category": "AI Productivity",
+      "tags": ["Next.js", "OpenAI", "Supabase", "TypeScript"],
+      "color": "var(--accent-violet)",
+      "href": "/case-studies/inboxfm",
+      "overview": "InboxFM is an AI-native email workspace that transforms cluttered email threads into summaries, actionable tasks, reminders, and audio briefings. It cuts down on email noise by parsing incoming messages and highlighting priority intelligence.",
+      "problem": "Professionals spend hours reading long email chains, manually creating tasks, and missing key updates due to inbox clutter. Traditional email clients treat all incoming messages with equal weight, leading to context overload.",
+      "solution": "We built a clean, modular workspace that connects securely via OAuth, ingests email payloads, and routes them through structured LLM parsing chains. InboxFM automatically generates 3-sentence summaries, extracts action items, schedule alerts, and compiles daily audio summaries using voice synthesis.",
+      "keyFeatures": [
+        "LLM-generated 3-sentence thread summaries",
+        "One-click task extraction syncing to productivity tools",
+        "Daily text-to-speech audio briefings of priority emails",
+        "Semantic filtering that flags critical contract updates or client blockers"
+      ],
+      "impact": "Users reduced time spent sorting emails by 65% and eliminated missed action items through automated task syncing.",
+      "technologies": ["Next.js", "OpenAI API", "Supabase", "TypeScript", "Node.js", "IMAP/OAuth"]
+    },
+    {
+      "id": "codedog",
+      "title": "CodeDog",
+      "category": "AI Security",
+      "tags": ["Go", "Docker", "Python", "GitHub API"],
+      "color": "var(--accent-cyan)",
+      "href": "/case-studies/codedog",
+      "overview": "CodeDog is an AI-powered static analysis platform that monitors code repositories in real-time, detects security risks, flags secret leaks, and identifies software vulnerabilities before they reach production.",
+      "problem": "Vulnerabilities and secret tokens are frequently committed to repositories by accident. Standard static analysis tools generate high volumes of false positives, causing developer fatigue and leading teams to ignore critical alerts.",
+      "solution": "We engineered a lightweight repository scanner that hooks into CI/CD pipelines via webhooks. CodeDog parses git diffs, analyzes changed files using custom AST scanners and LLM context mapping, and flags high-confidence risks directly in pull request comments. It won first place at IntelliHack 2025.",
+      "keyFeatures": [
+        "Webhook-triggered git diff parsing",
+        "AST-based secret leak detection and code structure mapping",
+        "Contextual LLM evaluations that reduce false positive alerts by 85%",
+        "Automated inline pull request review comments"
+      ],
+      "impact": "Identified and blocked 23 critical secret leaks in its first month and reduced false positives to less than 5%.",
+      "technologies": ["Go", "Docker", "Python", "GitHub API", "AST Parsers", "AWS Lambda"]
+    },
+    {
+      "id": "veddb",
+      "title": "VedDB",
+      "category": "Developer Infrastructure",
+      "tags": ["Rust", "Go", "TCP/IP", "Linux"],
+      "color": "var(--accent-emerald)",
+      "href": "/case-studies/veddb",
+      "overview": "VedDB is a high-performance, in-memory key-value database designed for microsecond-latency caching. Built for speed, it uses a custom binary wire protocol and a lightweight memory allocation structure.",
+      "problem": "Generic in-memory databases introduce high memory overhead and complex configurations. Product teams scaling cache layers need simple, ultra-fast integrations without the bloat of full enterprise database features.",
+      "solution": "We wrote a minimalist in-memory database engine featuring lock-free index structures and a custom TCP network protocol. It provides sub-millisecond lookups, basic transactional support, and easy client SDK configurations.",
+      "keyFeatures": [
+        "Lock-free hash table implementations optimized for multi-core scaling",
+        "Minimalist TCP binary protocol that cuts down serialization overhead",
+        "Snapshotted persistence configurations for crash recovery",
+        "Developer-first client SDKs with zero third-party dependencies"
+      ],
+      "impact": "Achieved 250,000+ operations per second on standard hardware with memory utilization 40% lower than standard caches.",
+      "technologies": ["Rust", "Go", "TCP/IP socket programming", "Linux profiling", "Lock-free structures"]
+    },
+    {
+      "id": "doxify",
+      "title": "Doxify",
+      "category": "Developer Productivity",
+      "tags": ["Node.js", "AST", "Markdown", "Git"],
+      "color": "var(--accent-amber)",
+      "href": "/case-studies/doxify",
+      "overview": "Doxify is an automated technical documentation engine that analyzes your project's codebase structure, parses inline docstrings, and generates clean, up-to-date developer portals automatically.",
+      "problem": "Technical references and setup guides go out of sync with code modifications within weeks. Maintaining manual developer documentation wastes precious hours and leads to outdated READMEs.",
+      "solution": "We developed a CLI tool that parses code Abstract Syntax Trees (ASTs). Doxify maps functions, types, and endpoints, extracting docstrings and generating structured Markdown guides. It automatically updates documentation inside GitHub actions whenever changes are pushed.",
+      "keyFeatures": [
+        "Multi-language AST parsing (TypeScript, Go, Python)",
+        "Automated API endpoint reference mapping",
+        "GitHub Actions integration for auto-updating documentation",
+        "Sleek static documentation site generator templates"
+      ],
+      "impact": "Saved engineering teams an average of 4 hours per developer per week, keeping documentation 100% in sync.",
+      "technologies": ["Node.js", "TypeScript AST", "Markdown", "Git Hook Engines", "VitePress"]
+    },
+    {
+      "id": "fakepe",
+      "title": "FakePE",
+      "category": "Developer Tools",
+      "tags": ["Next.js", "FastAPI", "JSON-RPC"],
+      "color": "var(--accent-violet)",
+      "href": "/case-studies/fakepe",
+      "overview": "FakePE is a payment gateway simulation platform. It replicates production payment processor API payloads, transaction workflows, and webhooks, allowing developers to test billing logic in offline sandboxes.",
+      "problem": "Integrating and testing edge states (like card declines, chargebacks, and network timeouts) in sandbox environments of real payment processors is slow, unreliable, and requires active internet connections.",
+      "solution": "We created a mock payment server replicating major gateway APIs (Stripe, Braintree, Razorpay). It supports webhook routing, simulates payment statuses via query params, and operates completely locally on a developer's machine.",
+      "keyFeatures": [
+        "1-to-1 API schema matching with leading payment gateways",
+        "Custom status triggers via HTTP header overrides",
+        "Robust offline-ready Docker image local deployments",
+        "Webhook delivery simulator showing retry queues"
+      ],
+      "impact": "Reduced billing integration bug rates by 70% and enabled zero-connectivity billing testing.",
+      "technologies": ["Next.js", "FastAPI", "Docker", "JSON-RPC", "PostgreSQL"]
+    },
+    {
+      "id": "scholarflex",
+      "title": "ScholarFlex",
+      "category": "Education Technology",
+      "tags": ["React", "Express", "MongoDB"],
+      "color": "var(--accent-cyan)",
+      "href": "/case-studies/scholarflex",
+      "overview": "ScholarFlex is a student productivity and internship management platform. It streamlines internship tracking, progress logging, university approvals, and employer evaluations.",
+      "problem": "University internship tracking is managed through spreadsheets, emails, and paper forms. Students, advisors, and employers struggle with fragmented communication, leading to delayed approvals and graduation blocks.",
+      "solution": "We designed and built a portal bringing students, advisors, and corporate employers into a single workspace. ScholarFlex logs hours, hosts evaluations, and automates approval routing based on custom university policies.",
+      "keyFeatures": [
+        "Milestone-based student internship logs",
+        "Automated approval chain routing for advisors",
+        "Employer assessment forms and grading panels",
+        "Secure document uploads for verification"
+      ],
+      "impact": "Adopted by 3 large educational institutions, reducing internship processing times from weeks to 2 days.",
+      "technologies": ["React", "Express", "Node.js", "MongoDB", "Tailwind CSS", "PDF Generation"]
+    },
+    {
+      "id": "ai-species-detection",
+      "title": "AI Species Detection",
+      "category": "Artificial Intelligence",
+      "tags": ["Python", "YOLOv8", "OpenCV", "PyTorch"],
+      "color": "var(--accent-emerald)",
+      "href": "/case-studies/species-detection",
+      "overview": "AI Species Detection is a computer vision platform designed for wildlife conservation. It automatically identifies and classifies animal species from camera trap images deployed in remote habitats.",
+      "problem": "Analyzing millions of camera trap images manually is tedious, slow, and delays ecological conservation efforts by months. Conservationists need fast, accurate classification systems that run on low-power devices.",
+      "solution": "We optimized a YOLOv8 computer vision model trained on custom wildlife datasets. We deployed this model to edge devices, building a dashboard that processes image batches, flags target species, and maps migration data.",
+      "keyFeatures": [
+        "Custom-trained YOLOv8 bounding box and classification models",
+        "Batch image upload pipelines handling 10k+ images",
+        "Offline-capable edge inference setup (Raspberry Pi/Jetson Nano)",
+        "Geospatial mapping of animal detections"
+      ],
+      "impact": "Achieved 94.2% classification accuracy, processing image batches 80 times faster than human experts.",
+      "technologies": ["Python", "YOLOv8", "OpenCV", "PyTorch", "FastAPI", "React Mapbox"]
+    },
+    {
+      "id": "rag-knowledge-assistant",
+      "title": "RAG Knowledge Assistant",
+      "category": "Artificial Intelligence",
+      "tags": ["Python", "PGVector", "LangChain", "OpenAI"],
+      "color": "var(--accent-amber)",
+      "href": "/case-studies/knowledge-assistant",
+      "overview": "RAG Knowledge Assistant is a semantic document search and QA engine that retrieves company intelligence from PDF specs, Notion wikis, and Slack threads.",
+      "problem": "Company knowledge is fragmented across formats and applications. Internal teams waste hours searching for technical specs, policies, or past decisions, leading to duplicate work and outdated procedures.",
+      "solution": "We engineered a Retrieval-Augmented Generation (RAG) system. It indexes files, converts text to vector embeddings, stores them in PGVector, and uses LLMs to answer natural language questions with source citations.",
+      "keyFeatures": [
+        "Data ingestion connectors (Notion, Google Drive, Slack)",
+        "Chunking optimization and PGVector similarity search",
+        "LLM context validation preventing hallucinations",
+        "Clear source citation links showing original documents"
+      ],
+      "impact": "Reduced internal support ticket count by 40% and cut spec lookup times from minutes to seconds.",
+      "technologies": ["Python", "PostgreSQL/PGVector", "LangChain", "OpenAI API", "FastAPI", "Docker"]
+    },
+    {
+      "id": "biznest",
+      "title": "BizNest",
+      "category": "Business Management",
+      "tags": ["Flutter", "Supabase", "Dart"],
+      "color": "var(--accent-violet)",
+      "href": "/case-studies/biznest",
+      "overview": "BizNest is a mobile-first operations hub for small retail stores, combining inventory tracking, sales logs, analytics, customer operations, and storefront catalog setups.",
+      "problem": "Small store owners use multiple disconnected tools (paper ledgers, simple POS systems, messaging apps) to manage stock and sell to clients. This leads to stockouts, lost records, and zero metrics visibility.",
+      "solution": "We built a lightweight, fast, offline-first mobile app using Flutter. BizNest helps owners track stock levels, issue digital invoices, analyze sales margins, and host a simple web catalog directly from their phones.",
+      "keyFeatures": [
+        "Offline-first stock registry with instant search",
+        "Digital PDF invoicing via WhatsApp or Email",
+        "Local and cloud database sync (Supabase)",
+        "Sales analytics showing top-performing products"
+      ],
+      "impact": "Helped 50+ local merchants transition to digital inventory, reducing stock discrepancies by 90%.",
+      "technologies": ["Flutter", "Dart", "Supabase", "SQLite", "Chart plotting systems"]
+    }
+  ],
+  "pages": {
+    "homepage": {
+      "hero": {
+        "badge": "THE VELNIX STUDIO",
+        "headline": "We build software products from idea to production.",
+        "subheadline": "An AI-Native Product & Engineering Studio. We design, code, and deploy SaaS platforms, custom AI systems, and mobile applications with an obsession for speed, design precision, and clean code."
+      },
+      "whyChooseUs": {
+        "label": "Why us",
+        "title": "Senior builders only. No overhead.",
+        "description": "We operate as a product partner and technical execution team. We focus on shipping products, not selling PowerPoints."
+      },
+      "process": {
+        "label": "How we work",
+        "title": "Our product delivery cycle",
+        "description": "We design, build, and deploy with complete transparency. Follow along in real-time."
+      }
+    },
+    "aboutPage": {
+      "intro": {
+        "badge": "About The Velnix",
+        "title": "We are a team of software systems builders",
+        "description": "The Velnix is a modern, engineering-first studio. We help ambitious founders and businesses build digital products that scale. We do not operate like a traditional software agency. We don't employ account managers or slide creators. You work directly with the developers and designers building your software."
+      },
+      "values": [
+        {
+          "title": "Product-Focused Execution",
+          "description": "We treat your project like our own. We focus on building what is necessary for your users to succeed, prioritizing execution and launch speed over everything else."
+        },
+        {
+          "title": "Engineering Craftsmanship",
+          "description": "We write clean, type-safe, and scalable code. Our databases are normalized, our API layers are fast, and our deployments are fully automated."
+        },
+        {
+          "title": "Trust & Extreme Transparency",
+          "description": "You see working software every week. We share GitHub repositories, Figma workspaces, and Slack channels. No big reveals, no surprises."
+        },
+        {
+          "title": "Design Precison",
+          "description": "We build interfaces that look premium and function smoothly. Our designs bridge the gap from Figma tokens to clean web CSS."
+        }
+      ]
+    },
+    "careersPage": {
+      "intro": {
+        "badge": "Build with us",
+        "title": "Join a team of senior builders",
+        "description": "We are a remote-first team of dedicated engineers and designers obsessed with layout precision, performance, and technical challenge. We don't care about credentials — we care about execution."
+      },
+      "perks": [
+        {
+          "title": "High Autonomy",
+          "description": "Work asynchronously with clear goals, minimal meetings, and full ownership of your domain."
+        },
+        {
+          "title": "Modern Tooling",
+          "description": "Access to state-of-the-art developer tools, top-tier SaaS subscriptions, and clean setups."
+        },
+        {
+          "title": "Professional Growth",
+          "description": "Work directly on high-performance infrastructure, advanced AI pipelines, and premium design products."
+        },
+        {
+          "title": "Competitive Compensation",
+          "description": "Attractive compensation structures matching global industry benchmarks for senior engineering talent."
+        }
+      ]
+    },
+    "solutionsPage": {
+      "intro": {
+        "badge": "Our Blueprints",
+        "title": "Engineered blueprints for scale and speed",
+        "description": "We don't start from scratch. We bring standard architectural blueprints for common systems (SaaS databases, RAG indices, and DevOps pipelines) to speed up technical execution."
+      },
+      "solutionsList": [
+        {
+          "title": "Startup Product Delivery",
+          "description": "Go from napkin sketch to market MVP quickly with optimized architectures, dynamic prototypes, and rapid iterations that align with investor timelines.",
+          "features": [
+            "Modular React/Next.js frontend setup",
+            "Serverless database deployment and connection pooling",
+            "Integrated billing (Stripe) and user authorization",
+            "Continuous deployment setups on Vercel or AWS"
+          ]
+        },
+        {
+          "title": "AI & Automation Pipelines",
+          "description": "Incorporate LLMs, build custom RAG pipelines, deploy species recognition edge vision models, and automate operational tasks.",
+          "features": [
+            "Structured LLM function calling pipelines",
+            "Optimized PGVector search indices",
+            "Automated third-party API webhook ingestion",
+            "Cron-based data scraper and sync scripts"
+          ]
+        },
+        {
+          "title": "SaaS Product Engineering",
+          "description": "Construct multi-tenant cloud products. Handle customer billing subscriptions, organization configurations, localized states, and metrics collections.",
+          "features": [
+            "Stripe multi-tier subscription billing layouts",
+            "Secure multi-tenant database partitioning",
+            "Telemetry and analytical dashboard views",
+            "Customizable user seat licensing models"
+          ]
+        }
+      ]
+    },
+    "technologiesPage": {
+      "intro": {
+        "badge": "Tech Infrastructure",
+        "title": "Built on production-proven technology",
+        "description": "We select tools based on type safety, community backing, performance under load, and developer speed. Here is what we use to build."
+      }
+    },
+    "faqs": [
+      {
+        "question": "How is The Velnix different from a typical software agency?",
+        "answer": "Traditional agencies rely on project managers, account executives, and slides. At The Velnix, you work directly with senior engineers and designers. We do not inflate scopes. We write code, push to GitHub, and deploy weekly."
+      },
+      {
+        "question": "Who will build my product?",
+        "answer": "Your product will be built directly by our core team of specialists: Mihir Rabari (Systems & Infrastructure), Khushi Patel & Aangi Shah (UI/UX & Product Design), Karan Mistry (AI & RAG Systems), Jignesh Prajapati (Mobile Applications), and Khushi Trivedi (Operations & Growth)."
+      },
+      {
+        "question": "What is your development process like?",
+        "answer": "We work in agile, bi-weekly sprints. We provide you with access to our GitHub repository, Figma files, and a staging URL where you can test live changes. We communicate daily in a shared Slack channel."
+      },
+      {
+        "question": "Do you help with database migration or scaling?",
+        "answer": "Yes. We design database schemas, configure multi-tenant isolation, optimize query performance, set up connection poolers, and build automated CI/CD pipelines to ensure seamless scaling."
+      }
+    ]
+  }
+}

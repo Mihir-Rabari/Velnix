@@ -9,40 +9,40 @@ import { TiltCard } from "@/components/ui/card";
 
 const projects = [
   {
-    title: "FinFlow Dashboard",
-    category: "SaaS · FinTech",
-    tags: ["React", "Node.js", "PostgreSQL", "AWS"],
+    title: "InboxFM",
+    category: "AI Productivity",
+    tags: ["Next.js", "OpenAI", "Supabase", "TypeScript"],
     description:
-      "Enterprise financial analytics platform with real-time data visualization and predictive modeling. Built a real-time risk scoring engine and automated reporting that cut manual work by 80%.",
+      "AI-native email workspace transforming emails into summaries, tasks, reminders, audio briefings, and actionable intelligence.",
     color: "var(--accent-violet)",
-    href: "/case-studies/finflow",
+    href: "/case-studies/inboxfm",
   },
   {
-    title: "MediConnect App",
-    category: "Mobile · HealthTech",
-    tags: ["React Native", "Firebase", "WebRTC"],
+    title: "CodeDog",
+    category: "AI Security",
+    tags: ["Go", "Docker", "Python", "GitHub API"],
     description:
-      "Cross-platform telehealth app connecting patients with specialists. Video consultations, prescription management, and insurance integration. 500K+ downloads in first quarter.",
+      "AI-powered platform that analyzes repositories, detects risks, identifies vulnerabilities, and improves software security. Winner of IntelliHack 2025.",
     color: "var(--accent-cyan)",
-    href: "/case-studies/mediconnect",
+    href: "/case-studies/codedog",
   },
   {
-    title: "CloudSync Pro",
-    category: "Enterprise · DevOps",
-    tags: ["Go", "Kubernetes", "Terraform", "GCP"],
+    title: "VedDB",
+    category: "Developer Infrastructure",
+    tags: ["Rust", "Go", "TCP/IP", "Linux"],
     description:
-      "Multi-cloud infrastructure management platform handling 10M+ daily API requests. Reduced deployment time from hours to minutes for a 200-person engineering org.",
+      "High-performance in-memory key-value database designed for speed, simplicity, and developer-first integrations.",
     color: "var(--accent-emerald)",
-    href: "/case-studies/cloudsync",
+    href: "/case-studies/veddb",
   },
   {
-    title: "AI Document Parser",
-    category: "AI/ML · Enterprise",
-    tags: ["Python", "TensorFlow", "FastAPI"],
+    title: "Doxify",
+    category: "Developer Productivity",
+    tags: ["Node.js", "AST", "Markdown", "Git"],
     description:
-      "Intelligent document extraction system that processes invoices, contracts, and forms with 99.7% accuracy. Replaced a 15-person data entry team.",
+      "Documentation platform that automatically generates and maintains technical documentation from project context and source code.",
     color: "var(--accent-amber)",
-    href: "/case-studies/docparser",
+    href: "/case-studies/doxify",
   },
 ];
 
