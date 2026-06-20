@@ -2,6 +2,7 @@
 
 import Link from "next/link";
 import { motion } from "framer-motion";
+import { useTheme } from "@/components/providers/theme-provider";
 import {
   Globe,
   MessageCircle,
@@ -83,6 +84,8 @@ const itemVariants = {
 };
 
 export function Footer() {
+  const { resolvedTheme } = useTheme();
+
   return (
     <footer
       className="relative"
@@ -146,17 +149,12 @@ export function Footer() {
           <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-8 lg:gap-12">
             {/* Brand Column */}
             <motion.div variants={itemVariants} className="col-span-2 md:col-span-3 lg:col-span-1">
-              <Link href="/" className="flex items-center gap-2 mb-6">
-                <div
-                  className="flex items-center justify-center rounded-lg"
-                  style={{
-                    width: "32px",
-                    height: "32px",
-                    background: "var(--gradient-brand)",
-                  }}
-                >
-                  <span className="text-white font-bold text-sm">V</span>
-                </div>
+              <Link href="/" className="flex items-center gap-2.5 mb-6 group">
+                <img
+                  src={resolvedTheme === "dark" ? "/logo-dark-theme.png" : "/logo-light-theme.png"}
+                  alt=""
+                  className="w-7 h-7 object-contain"
+                />
                 <span
                   className="font-bold"
                   style={{

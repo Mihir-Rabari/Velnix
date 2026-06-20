@@ -20,33 +20,30 @@ function getSystemTheme(): "light" | "dark" {
 
 export function ThemeProvider({ children }: { children: ReactNode }) {
   const [theme, setTheme] = useState<Theme>("dark");
-  const [resolvedTheme, setResolvedTheme] = useState<"light" | "dark">("dark");
+  const [, setSystemVersion] = useState(0);
+  const resolvedTheme = theme === "system" ? getSystemTheme() : theme;
 
   useEffect(() => {
     const stored = localStorage.getItem("velnix-theme") as Theme | null;
-    if (stored) {
-      setTheme(stored);
-    } else {
-      setTheme("dark");
-    }
+    if (!stored) return;
+    const frame = requestAnimationFrame(() => setTheme(stored));
+    return () => cancelAnimationFrame(frame);
   }, []);
 
   useEffect(() => {
-    const resolved = theme === "system" ? getSystemTheme() : theme;
-    setResolvedTheme(resolved);
-    document.documentElement.setAttribute("data-theme", resolved);
-    if (resolved === "dark") {
+    document.documentElement.setAttribute("data-theme", resolvedTheme);
+    if (resolvedTheme === "dark") {
       document.documentElement.classList.add("dark");
     } else {
       document.documentElement.classList.remove("dark");
     }
     localStorage.setItem("velnix-theme", theme);
-  }, [theme]);
+  }, [theme, resolvedTheme]);
 
   useEffect(() => {
     if (theme !== "system") return;
     const mediaQuery = window.matchMedia("(prefers-color-scheme: dark)");
-    const handler = () => setResolvedTheme(getSystemTheme());
+    const handler = () => setSystemVersion((version) => version + 1);
     mediaQuery.addEventListener("change", handler);
     return () => mediaQuery.removeEventListener("change", handler);
   }, [theme]);

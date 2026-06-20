@@ -1,0 +1,604 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "VelnixWebsiteContent",
+  "description": "Schema mapping all page-wise copy and content requirements to replace placeholders with real, production-ready marketing copy.",
+  "type": "OBJECT",
+  "pages": {
+    "homepage": {
+      "title": "Homepage / Landing Page Content",
+      "sections": {
+        "hero": {
+          "badge": {
+            "type": "string",
+            "current": "VELNIX v1.0",
+            "description": "Sleek pill-shaped version/status indicator above the main hero title.",
+            "maxLength": 20
+          },
+          "headline": {
+            "type": "string",
+            "current": "We build digital products that scale.",
+            "description": "The main hero screen headline. Should be punchy and developer-oriented.",
+            "maxLength": 60
+          },
+          "subheadline": {
+            "type": "string",
+            "current": "We are a boutique software development agency focused on high-performance web applications, serverless systems, and premium design engineering. We turn complex ideas into simple, robust code.",
+            "description": "Detailed introductory paragraph supporting the headline. Focuses on tech stack and craft.",
+            "maxLength": 250
+          },
+          "ctas": {
+            "primary": {
+              "type": "string",
+              "current": "Get in touch",
+              "description": "Text for the primary CTA button leading to contact/quote page."
+            },
+            "secondary": {
+              "type": "string",
+              "current": "View our work",
+              "description": "Text for the secondary CTA button scrolling to portfolio section."
+            }
+          },
+          "stats": [
+            {
+              "number": "143",
+              "suffix": "+",
+              "label": "Projects Shipped",
+              "description": "Stats counter figures showing experience and throughput."
+            },
+            {
+              "number": "99.9",
+              "suffix": "%",
+              "label": "Uptime SLA",
+              "description": "DevOps infrastructure stability proof metric."
+            },
+            {
+              "number": "15",
+              "suffix": "M+",
+              "label": "API Requests/day",
+              "description": "Scale and transaction volume metric."
+            }
+          ]
+        },
+        "services": {
+          "label": {
+            "type": "string",
+            "current": "What we do",
+            "description": "Section category tag above the main heading."
+          },
+          "title": {
+            "type": "string",
+            "current": "Services to help you scale",
+            "description": "Featured heading of the services section."
+          },
+          "description": {
+            "type": "string",
+            "current": "We build custom software, web platforms, and mobile apps with an obsession for speed, type safety, and premium user experience.",
+            "description": "Description paragraph below the title."
+          },
+          "items": [
+            {
+              "title": "Custom Web App Development",
+              "description": "Modern, high-performance web applications built from scratch. Specialized in Next.js, React, and serverless backends."
+            },
+            {
+              "title": "Cloud & Infrastructure",
+              "description": "Automated deployments, serverless scaling, and cloud migrations on AWS, GCP, and Azure. Kubernetes, Docker, and IaC."
+            },
+            {
+              "title": "UI/UX Design Engineering",
+              "description": "High-fidelity prototypes, unified component libraries, and interactive design systems that bridge the gap from Figma to code."
+            }
+          ]
+        },
+        "whyChooseUs": {
+          "label": {
+            "type": "string",
+            "current": "Why us"
+          },
+          "title": {
+            "type": "string",
+            "current": "What makes working with us different"
+          },
+          "description": {
+            "type": "string",
+            "current": "We're a small, senior team that treats your project like our own product. No juniors learning on your dime."
+          },
+          "reasons": [
+            {
+              "metric": "97%",
+              "metricLabel": "on-time delivery",
+              "title": "We ship when we say we will",
+              "description": "Transparent timelines, milestone tracking, and honest updates. We don't overpromise — we build in buffer and deliver on schedule."
+            },
+            {
+              "metric": "143",
+              "metricLabel": "projects completed",
+              "title": "We've done this before",
+              "description": "Across startups, scale-ups, and enterprises — from fintech to healthcare to e-commerce. We bring cross-industry perspective to every engagement."
+            },
+            {
+              "metric": "<2h",
+              "metricLabel": "avg response time",
+              "title": "You'll always know what's happening",
+              "description": "Dedicated Slack channel, weekly demos, direct access to your engineering lead. No account managers playing telephone."
+            },
+            {
+              "metric": "99.9%",
+              "metricLabel": "uptime SLA",
+              "title": "We don't disappear after launch",
+              "description": "24/7 monitoring, proactive maintenance, and ongoing support. Your product keeps running smoothly while you focus on growth."
+            }
+          ]
+        },
+        "portfolio": {
+          "label": {
+            "type": "string",
+            "current": "Selected work"
+          },
+          "title": {
+            "type": "string",
+            "current": "Projects we're proud of"
+          },
+          "description": {
+            "type": "string",
+            "current": "A few examples of what we've built. Every project started as a conversation."
+          },
+          "items": [
+            {
+              "title": "FinFlow Dashboard",
+              "category": "SaaS · FinTech",
+              "tags": ["React", "Node.js", "PostgreSQL", "AWS"],
+              "description": "Enterprise financial analytics platform with real-time data visualization and predictive modeling. Built a real-time risk scoring engine and automated reporting."
+            },
+            {
+              "title": "MediConnect App",
+              "category": "Mobile · HealthTech",
+              "tags": ["React Native", "Firebase", "WebRTC"],
+              "description": "Cross-platform telehealth app connecting patients with specialists. Video consultations, prescription management, and insurance integration."
+            },
+            {
+              "title": "CloudSync Pro",
+              "category": "Enterprise · DevOps",
+              "tags": ["Go", "Kubernetes", "Terraform", "GCP"],
+              "description": "Multi-cloud infrastructure management platform handling 10M+ daily API requests. Reduced deployment time from hours to minutes."
+            },
+            {
+              "title": "AI Document Parser",
+              "category": "AI/ML · Enterprise",
+              "tags": ["Python", "TensorFlow", "FastAPI"],
+              "description": "Intelligent document extraction system that processes invoices, contracts, and forms with 99.7% accuracy. Replaced manual data entry."
+            }
+          ]
+        },
+        "process": {
+          "label": {
+            "type": "string",
+            "current": "How we work"
+          },
+          "title": {
+            "type": "string",
+            "current": "Our product delivery cycle"
+          },
+          "steps": [
+            {
+              "number": "01",
+              "title": "Understand",
+              "description": "We dig into your problem, your users, and your constraints. No generic discovery workshops — just real conversations.",
+              "deliverables": ["Technical spec draft", "User persona maps", "Strategic backlog roadmap"]
+            },
+            {
+              "number": "02",
+              "title": "Design",
+              "description": "Wireframes, interactive prototypes, and layout flowcharts. We design collaboratively so there are no surprises when development starts.",
+              "deliverables": ["Figma prototypes", "Layout system design", "Interactive user flows"]
+            },
+            {
+              "number": "03",
+              "title": "Build",
+              "description": "Agile sprints with biweekly demos. You see working software early and often — not a big reveal after 4 months.",
+              "deliverables": ["Production-ready repository", "Bi-weekly sprint demos", "Continuous staging links"]
+            },
+            {
+              "number": "04",
+              "title": "Ship & Support",
+              "description": "We handle the launch, set up monitoring, and stick around for ongoing iteration. We don't ghost you after deploy.",
+              "deliverables": ["App store/cloud launch", "24/7 logging setups", "SLA maintenance plans"]
+            }
+          ]
+        },
+        "testimonials": {
+          "label": {
+            "type": "string",
+            "current": "From our clients"
+          },
+          "title": {
+            "type": "string",
+            "current": "Don't take our word for it"
+          },
+          "items": [
+            {
+              "name": "Sarah Chen",
+              "role": "CTO",
+              "company": "A Series B fintech startup",
+              "content": "We came to Velnix with a mess of legacy code and a 3-month deadline. They didn't just refactor — they rethought the entire architecture and delivered a week early. Our engineering team still references their codebase as the gold standard."
+            },
+            {
+              "name": "Marcus Rodriguez",
+              "role": "Founder",
+              "company": "An AI analytics company",
+              "content": "Most agencies nod along and build what you ask for. Velnix pushed back, asked harder questions, and ultimately built something better than what I'd spec'd. That's the difference between a vendor and a partner."
+            },
+            {
+              "name": "Emily Watson",
+              "role": "VP of Engineering",
+              "company": "A cloud infrastructure company",
+              "content": "We've worked with five different agencies over the years. Velnix is the only one we kept. Their engineers genuinely care about code quality, not just shipping fast. The codebase they handed off was cleaner than most of our internal code."
+            },
+            {
+              "name": "James Park",
+              "role": "Product Director",
+              "company": "A healthcare SaaS platform",
+              "content": "The team felt like an extension of ours from day one. Slack responses in minutes, proactive about potential issues, transparent about tradeoffs. I've recommended them to three other companies since."
+            }
+          ]
+        },
+        "faq": {
+          "label": {
+            "type": "string",
+            "current": "Got questions?"
+          },
+          "title": {
+            "type": "string",
+            "current": "Frequently asked questions"
+          },
+          "items": [
+            {
+              "question": "How long does a typical project take?",
+              "answer": "It depends on scope. A marketing site might take 4-6 weeks. A full SaaS product is usually 3-6 months. We'll give you a realistic timeline after our first conversation — no guessing."
+            },
+            {
+              "question": "Who will I be working with directly?",
+              "answer": "You work directly with senior developers and designers. No account managers playing telephone. We use Slack, Figma, and GitHub to keep you in the loop daily."
+            },
+            {
+              "question": "Do you offer post-launch maintenance?",
+              "answer": "Yes, we offer ongoing SLA plans covering updates, server scaling, automated testing, and general maintenance. We make sure your application runs 24/7 without issues."
+            },
+            {
+              "question": "What is your main technology stack?",
+              "answer": "We specialize in React, Next.js, and TypeScript on the frontend, with Node.js, Go, Python, and Rust on the backend. We deploy to AWS, Google Cloud, and Vercel using Docker, Kubernetes, and Terraform."
+            }
+          ]
+        }
+      }
+    },
+    "aboutPage": {
+      "title": "About Page Content",
+      "sections": {
+        "intro": {
+          "badge": {
+            "type": "string",
+            "current": "About The Velnix"
+          },
+          "title": {
+            "type": "string",
+            "current": "We are architects of the digital frontier"
+          },
+          "description": {
+            "type": "string",
+            "current": "Founded in 2018, The Velnix has grown from a boutique agency into a premium global engineering and design partner. We help ambitious startups and established enterprises turn complex challenges into simple, beautiful software."
+          }
+        },
+        "values": [
+          {
+            "title": "Mission-Driven",
+            "description": "To engineer exceptional digital experiences that empower organizations to scale, innovate, and lead their industries."
+          },
+          {
+            "title": "Our Vision",
+            "description": "To be the global benchmark for premium software engineering, recognized for design elegance and technical excellence."
+          },
+          {
+            "title": "Trust & Transparency",
+            "description": "We believe in clear communication, honest timelines, complete ownership of our code, and long-term partnerships."
+          },
+          {
+            "title": "Human-Centric Design",
+            "description": "Technology is for people. We design and build systems that prioritize usability, accessibility, and delight."
+          }
+        ],
+        "team": [
+          {
+            "name": "Alex Mercer",
+            "role": "CEO & Founder",
+            "bio": "Former Tech Lead at Stripe. Passionate about software architecture and product design."
+          },
+          {
+            "name": "Elena Rostova",
+            "role": "VP of Engineering",
+            "bio": "Ex-Google Senior Staff Engineer. Distributed systems specialist and open-source contributor."
+          },
+          {
+            "name": "Marcus Vance",
+            "role": "Head of Design",
+            "bio": "Award-winning designer. Formerly lead designer at Figma and Apple."
+          },
+          {
+            "name": "Sarah Jenkins",
+            "role": "Head of AI Research",
+            "bio": "Ph.D. in Computer Science from Stanford. Focuses on NLP and neural network optimizations."
+          }
+        ]
+      }
+    },
+    "careersPage": {
+      "title": "Careers Page Content",
+      "sections": {
+        "intro": {
+          "badge": {
+            "type": "string",
+            "current": "We are hiring!"
+          },
+          "title": {
+            "type": "string",
+            "current": "Build the future of software engineering"
+          },
+          "description": {
+            "type": "string",
+            "current": "Join a remote-first team of dedicated builders, engineers, and designers obsessed with craft, layout precision, and performance."
+          }
+        },
+        "perks": [
+          {
+            "title": "Competitive Pay",
+            "description": "Premium salaries matching global standards, plus annual performance-based profit sharing."
+          },
+          {
+            "title": "Health & Wellness",
+            "description": "Full medical cover, dental packages, mental health allowances, and gym memberships."
+          },
+          {
+            "title": "Flexible Hours",
+            "description": "Work remote-first with asynchronous collaboration, core sync hours, and unlimited PTO."
+          },
+          {
+            "title": "Gear Allowance",
+            "description": "Receive a remote setup budget of $3,000 for high-end laptops, screens, and ergonomic desks."
+          }
+        ],
+        "jobs": [
+          {
+            "title": "Senior Frontend Engineer (Next.js)",
+            "department": "Engineering",
+            "location": "Remote (US/EU)",
+            "type": "Full-Time"
+          },
+          {
+            "title": "Full Stack Go/Rust Engineer",
+            "department": "Engineering",
+            "location": "Remote (Global)",
+            "type": "Full-Time"
+          },
+          {
+            "title": "Senior UI/UX Product Designer",
+            "department": "Design",
+            "location": "San Francisco / Hybrid",
+            "type": "Full-Time"
+          },
+          {
+            "title": "DevOps Infrastructure Lead",
+            "department": "Operations",
+            "location": "Remote (US/EU)",
+            "type": "Full-Time"
+          }
+        ]
+      }
+    },
+    "servicesPage": {
+      "title": "Services Page Content",
+      "sections": {
+        "intro": {
+          "badge": {
+            "type": "string",
+            "current": "What We Offer"
+          },
+          "title": {
+            "type": "string",
+            "current": "Empowering your team with premium services"
+          },
+          "description": {
+            "type": "string",
+            "current": "We combine high-performance engineering with modern design principles to build digital products that feel premium and scale endlessly."
+          }
+        },
+        "detailedServices": [
+          {
+            "title": "Custom Software Development",
+            "description": "Bespoke backend systems, operational hubs, and integrations customized to your business goals. We design with performance, scalability, and security from the core.",
+            "benefits": ["Customized fit for unique workflows", "Full ownership of source code", "No monthly licensing overheads", "Enterprise integrations ready"]
+          },
+          {
+            "title": "Web Development & Jamstack",
+            "description": "High-speed frontend solutions powered by React, Next.js, and headless CMSs. Superb rendering, rich SEO setups, and fluid motion that wows your audience.",
+            "benefits": ["Vercel and Netlify optimization", "95+ Lighthouse score guaranteed", "Responsive mobile-first layouts", "Dynamic transitions"]
+          },
+          {
+            "title": "Mobile App Development",
+            "description": "Premium iOS and Android apps built via React Native and Flutter. Get the performance of native code combined with quick hybrid delivery pipelines.",
+            "benefits": ["App Store & Google Play launch support", "Offline-first capability", "Push notifications & widgets", "Smooth micro-interactions"]
+          },
+          {
+            "title": "AI & Machine Learning Integration",
+            "description": "Incorporate large language models, machine learning algorithms, OCR pipelines, and conversational voice interfaces into your existing applications.",
+            "benefits": ["Cognitive automation & analysis", "OpenAI, Anthropic & custom models", "Fine-tuning & RAG architectures", "Operational efficiency boost"]
+          },
+          {
+            "title": "Cloud & Devops Solutions",
+            "description": "Highly available, auto-scaling architectures designed on AWS, GCP, and Azure. Fully managed pipelines with Docker, Kubernetes, and Terraform.",
+            "benefits": ["Infrastructure as Code (IaC)", "Proactive cost containment", "Continuous deployment setups", "Comprehensive logging & metrics"]
+          },
+          {
+            "title": "UI/UX & Design Systems",
+            "description": "Outstanding, premium designs and interactive prototypes crafted to wow visitors. Complete with structured components for seamless engineering integration.",
+            "benefits": ["User-centric research", "Interactive Figma prototypes", "Scalable UI component libraries", "Premium light/dark themes"]
+          }
+        ],
+        "pricing": [
+          {
+            "title": "Fixed Scope",
+            "price": "From $15k",
+            "description": "Perfect for projects with clearly defined specifications, layouts, and endpoints. Clear deliverables and timeline.",
+            "features": ["Defined milestone payments", "Complete engineering plan", "Daily/weekly updates", "30 days post-launch support"]
+          },
+          {
+            "title": "Time & Materials",
+            "price": "Hourly Rate",
+            "description": "Ideal for agile projects, evolving requirements, and rapid prototyping. Total flexibility to pivot at any point.",
+            "features": ["Bi-weekly sprint demos", "Detailed hours logging", "Flexible resource allocation", "Scale team up or down anytime"]
+          },
+          {
+            "title": "Dedicated Team",
+            "price": "Monthly Retainer",
+            "description": "Your own full-time product team: designer, lead developer, QA, and project manager. Scaled for long-term projects.",
+            "features": ["100% focused on your product", "Daily standups and communication", "Full integration with your tools", "Continuous code delivery"]
+          }
+        ]
+      }
+    },
+    "solutionsPage": {
+      "title": "Solutions Page Content",
+      "sections": {
+        "intro": {
+          "badge": {
+            "type": "string",
+            "current": "Our Solutions"
+          },
+          "title": {
+            "type": "string",
+            "current": "Engineered for scale and growth"
+          },
+          "description": {
+            "type": "string",
+            "current": "Whether you are a fast-growing startup, building a modern SaaS platform, or digitizing complex enterprise operations, we have standard blueprints ready."
+          }
+        },
+        "solutionsList": [
+          {
+            "title": "Enterprise Digitalization",
+            "description": "Scale infrastructure, establish governance, and build custom ERP, CRM, and analytics systems designed for secure high-throughput corporate operations.",
+            "features": [
+              "SOC 2 Type II & GDPR compliance standards",
+              "Seamless Active Directory / SSO authentication integration",
+              "Robust failover systems and auto-scaling configurations",
+              "High-availability SLA policies"
+            ]
+          },
+          {
+            "title": "Startup Acceleration",
+            "description": "Go from napkin sketch to market MVP quickly with optimized architectures, dynamic prototypes, and rapid iterations that align with investor timelines.",
+            "features": [
+              "Rapid prototype creation and agile feedback cycles",
+              "Scalable infrastructure layout using serverless setups",
+              "Cost-optimized deployment with Vercel and AWS",
+              "Integration-ready API structures"
+            ]
+          },
+          {
+            "title": "SaaS Product Engineering",
+            "description": "Construct multi-tenant cloud products. Handle customer billing subscriptions, organization configurations, localized states, and metrics collections.",
+            "features": [
+              "Stripe and billing cycle logic integration",
+              "Secure multi-tenant database designs",
+              "Comprehensive telemetry and dashboard views",
+              "Customizable user seat licensing models"
+            ]
+          }
+        ],
+        "integrations": {
+          "title": "Infinite Integration Power",
+          "description": "No software is an island. We build our solutions to connect with your existing workflows, databases, CRM, and cloud storage providers. We specialize in building secure gateway API routers, queue configurations, and real-time syncing brokers.",
+          "list": ["Stripe", "AWS", "Google Cloud", "Azure", "Salesforce", "HubSpot", "Zapier", "Slack", "OAuth 2.0", "GraphQL", "Algolia", "OpenAI"]
+        }
+      }
+    },
+    "technologiesPage": {
+      "title": "Technologies Page Content",
+      "sections": {
+        "intro": {
+          "badge": {
+            "type": "string",
+            "current": "Tech Infrastructure"
+          },
+          "title": {
+            "type": "string",
+            "current": "Built on state of the art tools"
+          },
+          "description": {
+            "type": "string",
+            "current": "We don't compromise on developer tools, system libraries, or deployment servers. Discover our tech guidelines."
+          }
+        },
+        "detailsList": [
+          {
+            "title": "Modern Frontend Stack",
+            "description": "React, Next.js, and TypeScript form our core framework. We utilize compiler-driven optimization and Jamstack architectures for speed.",
+            "techs": ["React", "Next.js", "TypeScript", "Tailwind CSS", "Framer Motion", "Vite"]
+          },
+          {
+            "title": "Backend & Systems",
+            "description": "Engineered with Node.js, Go, Python, and Rust. We design microservices and API gateways built to handle heavy client requests.",
+            "techs": ["Node.js", "Go", "Python", "Rust", "Express", "FastAPI"]
+          },
+          {
+            "title": "Mobile Frameworks",
+            "description": "Hybrid and native development pathways. We leverage React Native and Flutter for multi-platform synchronization.",
+            "techs": ["React Native", "Flutter", "Swift", "Kotlin", "Expo"]
+          },
+          {
+            "title": "Cloud & Infrastructure",
+            "description": "Multi-cloud hosting environments managed via automated infrastructure. Supported by container virtualization.",
+            "techs": ["AWS", "Google Cloud", "Azure", "Docker", "Kubernetes", "Terraform"]
+          },
+          {
+            "title": "Data Management",
+            "description": "Scalable relational and document-oriented databases. Optimized with cache brokers for lightning-fast reads.",
+            "techs": ["PostgreSQL", "MongoDB", "Redis", "Supabase", "Prisma", "DynamoDB"]
+          },
+          {
+            "title": "AI Integration Tools",
+            "description": "We deploy machine learning models, build embeddings, establish semantic search capabilities, and customize open weights models.",
+            "techs": ["TensorFlow", "PyTorch", "OpenAI API", "Hugging Face", "LangChain", "ChromaDB"]
+          }
+        ]
+      }
+    },
+    "contactAndQuote": {
+      "title": "Contact & Quote Estimator",
+      "sections": {
+        "contactDetails": {
+          "title": "Let's build something together",
+          "description": "Have a project in mind? Or just want to say hi? Fill out the form or reach out directly.",
+          "infoList": [
+            {
+              "type": "Email",
+              "value": "hello@velnix.com"
+            },
+            {
+              "type": "Phone",
+              "value": "+1 (555) 000-0000"
+            },
+            {
+              "type": "Office",
+              "value": "100 Pine St, San Francisco, CA"
+            }
+          ]
+        },
+        "quoteEstimator": {
+          "budgetRanges": ["$10k - $25k", "$25k - $50k", "$50k - $100k", "$100k+"],
+          "timelines": ["Under 1 month", "1-3 months", "3-6 months", "6+ months"],
+          "projectTypes": ["SaaS Application", "Mobile App", "Corporate Website", "Cloud/DevOps Setup", "AI Integration", "Other"]
+        }
+      }
+    }
+  }
+}

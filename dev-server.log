@@ -1,0 +1,45 @@
+▲ Next.js 16.2.9 (Turbopack)
+- Local:         http://localhost:3001
+- Network:       http://10.135.93.36:3001
+✓ Ready in 1200ms
+
+  We detected TypeScript in your project and reconfigured your tsconfig.json file for you.
+  The following suggested values were added to your tsconfig.json. These values can be changed to fit your project's needs:
+
+  	- include was updated to add '.next-3001/types/**/*.ts'
+  	- include was updated to add '.next-3001/dev/types/**/*.ts'
+
+
+ GET / 500 in 2.1s (next.js: 1729ms, application-code: 329ms)
+ GET / 500 in 52ms (next.js: 38ms, application-code: 15ms)
+ GET / 500 in 52ms (next.js: 36ms, application-code: 16ms)
+ GET / 500 in 31ms (next.js: 16ms, application-code: 15ms)
+ GET / 500 in 76ms (next.js: 63ms, application-code: 13ms)
+ GET / 500 in 77ms (next.js: 61ms, application-code: 15ms)
+ GET / 500 in 66ms (next.js: 53ms, application-code: 13ms)
+ GET / 500 in 76ms (next.js: 60ms, application-code: 16ms)
+ GET / 500 in 54ms (next.js: 36ms, application-code: 17ms)
+ GET / 500 in 77ms (next.js: 61ms, application-code: 16ms)
+ GET / 500 in 27ms (next.js: 13ms, application-code: 14ms)
+ GET / 500 in 30ms (next.js: 15ms, application-code: 15ms)
+ GET / 500 in 77ms (next.js: 61ms, application-code: 16ms)
+ GET / 500 in 77ms (next.js: 61ms, application-code: 16ms)
+ GET / 500 in 74ms (next.js: 58ms, application-code: 16ms)
+ GET / 500 in 38ms (next.js: 23ms, application-code: 15ms)
+ GET / 500 in 45ms (next.js: 30ms, application-code: 15ms)
+ GET / 500 in 49ms (next.js: 35ms, application-code: 14ms)
+ GET / 500 in 34ms (next.js: 19ms, application-code: 15ms)
+ GET / 500 in 73ms (next.js: 58ms, application-code: 15ms)
+ GET / 500 in 49ms (next.js: 33ms, application-code: 15ms)
+ GET / 500 in 50ms (next.js: 34ms, application-code: 16ms)
+ GET / 500 in 41ms (next.js: 23ms, application-code: 18ms)
+ GET / 500 in 27ms (next.js: 13ms, application-code: 14ms)
+ GET / 500 in 73ms (next.js: 58ms, application-code: 15ms)
+ GET / 500 in 76ms (next.js: 58ms, application-code: 18ms)
+ GET / 500 in 72ms (next.js: 58ms, application-code: 15ms)
+ GET / 500 in 40ms (next.js: 24ms, application-code: 16ms)
+ GET / 500 in 75ms (next.js: 59ms, application-code: 16ms)
+ GET / 500 in 73ms (next.js: 59ms, application-code: 14ms)
+ GET / 500 in 52ms (next.js: 36ms, application-code: 16ms)
+ GET / 500 in 33ms (next.js: 13ms, application-code: 20ms)
+[?25h

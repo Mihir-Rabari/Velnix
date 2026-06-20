@@ -7,12 +7,12 @@ export default function PrivacyPage() {
   return (
     <div className="pt-24">
       {/* Header */}
-      <SectionWrapper background="primary" padding="xl">
+      <SectionWrapper background="primary" padding="sm">
         <div className="max-w-3xl mx-auto text-center">
           <motion.h1
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
-            className="text-4xl md:text-5xl font-extrabold tracking-tight mb-4"
+            className="text-3xl md:text-4xl font-extrabold tracking-tight mb-3"
           >
             Privacy Policy
           </motion.h1>

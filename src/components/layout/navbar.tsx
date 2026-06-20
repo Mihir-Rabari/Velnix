@@ -87,17 +87,17 @@ export function Navbar() {
           aria-label="Main navigation"
         >
           {/* Logo */}
-          <Link href="/" className="flex items-center gap-2 relative z-10" aria-label="The Velnix Home">
-            <div
-              className="flex items-center justify-center rounded-lg"
+          <Link href="/" className="flex items-center gap-2.5 relative z-10" aria-label="The Velnix Home">
+            <img
+              src={resolvedTheme === "dark" ? "/logo-dark-theme.png" : "/logo-light-theme.png"}
+              alt=""
+              className="w-8 h-8 object-contain transition-all duration-300"
               style={{
-                width: "36px",
-                height: "36px",
-                background: "var(--gradient-brand)",
+                filter: resolvedTheme === "dark" 
+                  ? "drop-shadow(0 0 8px rgba(179,239,178,0.2))" 
+                  : "none"
               }}
-            >
-              <span className="text-white font-bold text-lg" aria-hidden="true">V</span>
-            </div>
+            />
             <span
               className="font-bold tracking-tight"
               style={{
@@ -297,15 +297,22 @@ export function Navbar() {
               }}
             >
               <div className="flex items-center justify-between" style={{ padding: "var(--space-5)", height: "var(--navbar-height)" }}>
-                <span
-                  className="font-bold"
-                  style={{
-                    fontSize: "var(--navbar-logo-font-size)",
-                    color: "var(--theme-text-primary)",
-                  }}
-                >
-                  The Velnix
-                </span>
+                <div className="flex items-center gap-2.5">
+                  <img
+                    src={resolvedTheme === "dark" ? "/logo-dark-theme.png" : "/logo-light-theme.png"}
+                    alt=""
+                    className="w-7 h-7 object-contain"
+                  />
+                  <span
+                    className="font-bold"
+                    style={{
+                      fontSize: "var(--navbar-logo-font-size)",
+                      color: "var(--theme-text-primary)",
+                    }}
+                  >
+                    The Velnix
+                  </span>
+                </div>
                 <button
                   onClick={() => setIsMobileOpen(false)}
                   className="flex items-center justify-center rounded-lg"

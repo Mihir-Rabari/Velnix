@@ -1,0 +1,76 @@
+▲ Next.js 16.2.9 (Turbopack)
+- Local:         http://localhost:3001
+- Network:       http://10.135.93.36:3001
+✓ Ready in 1210ms
+
+  We detected TypeScript in your project and reconfigured your tsconfig.json file for you.
+  The following suggested values were added to your tsconfig.json. These values can be changed to fit your project's needs:
+
+  	- include was updated to add '.next-run/types/**/*.ts'
+  	- include was updated to add '.next-run/dev/types/**/*.ts'
+
+
+○ Compiling / ...
+ GET / 200 in 5.7s (next.js: 4.9s, application-code: 832ms)
+ GET / 200 in 341ms (next.js: 10ms, application-code: 331ms)
+ GET / 200 in 475ms (next.js: 11ms, application-code: 464ms)
+ GET /about 200 in 925ms (next.js: 867ms, application-code: 58ms)
+✓ Compiled in 176ms
+ GET /about 200 in 616ms (next.js: 491ms, application-code: 125ms)
+ GET / 200 in 591ms (next.js: 153ms, application-code: 437ms)
+✓ Compiled in 1119ms
+ GET /about 200 in 1390ms (next.js: 231ms, application-code: 1158ms)
+ GET / 200 in 1390ms (next.js: 532ms, application-code: 858ms)
+ GET /about 200 in 672ms (next.js: 62ms, application-code: 610ms)
+ GET / 200 in 719ms (next.js: 122ms, application-code: 597ms)
+ GET /about 200 in 550ms (next.js: 10ms, application-code: 541ms)
+ GET / 200 in 552ms (next.js: 64ms, application-code: 488ms)
+ GET / 200 in 599ms (next.js: 64ms, application-code: 535ms)
+ GET / 200 in 600ms (next.js: 109ms, application-code: 491ms)
+ GET / 200 in 600ms (next.js: 164ms, application-code: 437ms)
+ GET /about 200 in 404ms (next.js: 9ms, application-code: 395ms)
+ GET /about 200 in 609ms (next.js: 10ms, application-code: 599ms)
+ GET / 200 in 609ms (next.js: 12ms, application-code: 597ms)
+ GET /about 200 in 608ms (next.js: 89ms, application-code: 519ms)
+ GET /about 200 in 527ms (next.js: 14ms, application-code: 513ms)
+ GET / 200 in 526ms (next.js: 56ms, application-code: 470ms)
+ GET / 200 in 480ms (next.js: 11ms, application-code: 468ms)
+ GET /about 200 in 481ms (next.js: 60ms, application-code: 421ms)
+ GET / 200 in 480ms (next.js: 159ms, application-code: 322ms)
+ GET / 200 in 484ms (next.js: 110ms, application-code: 374ms)
+ GET / 200 in 435ms (next.js: 167ms, application-code: 269ms)
+ GET /about 200 in 275ms (next.js: 8ms, application-code: 267ms)
+ GET /about 200 in 208ms (next.js: 9ms, application-code: 199ms)
+ GET /about 200 in 151ms (next.js: 12ms, application-code: 139ms)
+ GET /about 200 in 74ms (next.js: 8ms, application-code: 66ms)
+ GET / 200 in 800ms (next.js: 9ms, application-code: 791ms)
+ GET /about 200 in 200ms (next.js: 7ms, application-code: 192ms)
+ GET /services 200 in 1217ms (next.js: 982ms, application-code: 235ms)
+ GET /portfolio 200 in 1250ms (next.js: 1048ms, application-code: 202ms)
+ GET /blog/future-ai-custom-software 200 in 2.3s (next.js: 2.1s, application-code: 213ms)
+ GET /privacy 200 in 1090ms (next.js: 916ms, application-code: 174ms)
+ GET / 200 in 353ms (next.js: 8ms, application-code: 345ms)
+✓ Compiled in 95ms
+ GET /about 200 in 971ms (next.js: 127ms, application-code: 844ms)
+ GET / 200 in 980ms (next.js: 440ms, application-code: 540ms)
+ GET /about 200 in 440ms (next.js: 8ms, application-code: 432ms)
+ GET / 200 in 382ms (next.js: 6ms, application-code: 376ms)
+ GET /about 200 in 174ms (next.js: 7ms, application-code: 167ms)
+ GET /services 200 in 199ms (next.js: 27ms, application-code: 172ms)
+ GET /portfolio 200 in 201ms (next.js: 15ms, application-code: 186ms)
+ GET /blog/future-ai-custom-software 200 in 221ms (next.js: 33ms, application-code: 188ms)
+ GET /privacy 200 in 165ms (next.js: 17ms, application-code: 148ms)
+ GET / 200 in 317ms (next.js: 9ms, application-code: 308ms)
+ GET / 200 in 323ms (next.js: 11ms, application-code: 311ms)
+ GET /about 200 in 52ms (next.js: 8ms, application-code: 44ms)
+ GET /services 200 in 51ms (next.js: 6ms, application-code: 45ms)
+ GET /portfolio 200 in 49ms (next.js: 7ms, application-code: 42ms)
+ GET / 200 in 49ms (next.js: 7ms, application-code: 41ms)
+ GET / 200 in 23ms (next.js: 8ms, application-code: 15ms)
+ GET / 200 in 51ms (next.js: 7ms, application-code: 43ms)
+✓ Compiled in 167ms
+ GET /about 200 in 221ms (next.js: 114ms, application-code: 107ms)
+ GET / 200 in 878ms (next.js: 229ms, application-code: 649ms)
+ GET / 200 in 59ms (next.js: 8ms, application-code: 51ms)
+ GET /get-quote 200 in 893ms (next.js: 836ms, application-code: 57ms)
+[?25h

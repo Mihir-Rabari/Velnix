@@ -88,12 +88,12 @@ export default function ServicesPage() {
   return (
     <div className="pt-24">
       {/* Hero */}
-      <SectionWrapper background="primary" padding="xl">
+      <SectionWrapper background="primary" padding="sm">
         <div className="max-w-3xl mx-auto text-center">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
-            className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full mb-6"
+            className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full mb-4"
             style={{
               background: "var(--feature-card-icon-bg)",
               border: "1px solid var(--border-accent)",
@@ -108,7 +108,7 @@ export default function ServicesPage() {
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.1 }}
-            className="text-4xl md:text-5xl lg:text-6xl font-extrabold tracking-tight mb-6"
+            className="text-3xl md:text-4xl lg:text-5xl font-extrabold tracking-tight mb-4"
           >
             Empowering your team with <span className="gradient-text">premium services</span>
           </motion.h1>
@@ -116,7 +116,7 @@ export default function ServicesPage() {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.2 }}
-            className="text-lg md:text-xl text-[var(--theme-text-secondary)]"
+            className="text-base md:text-lg text-[var(--theme-text-secondary)]"
           >
             We combine high-performance engineering with modern design principles to build digital products that feel premium and scale endlessly.
           </motion.p>

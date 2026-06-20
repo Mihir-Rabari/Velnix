@@ -20,12 +20,12 @@ export default function ContactPage() {
   return (
     <div className="pt-24">
       {/* Intro */}
-      <SectionWrapper background="primary" padding="xl">
+      <SectionWrapper background="primary" padding="sm">
         <div className="max-w-3xl mx-auto text-center">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
-            className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full mb-6"
+            className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full mb-4"
             style={{
               background: "var(--feature-card-icon-bg)",
               border: "1px solid var(--border-accent)",
@@ -40,7 +40,7 @@ export default function ContactPage() {
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.1 }}
-            className="text-4xl md:text-5xl lg:text-6xl font-extrabold tracking-tight mb-6"
+            className="text-3xl md:text-4xl lg:text-5xl font-extrabold tracking-tight mb-4"
           >
             Let&apos;s build <span className="gradient-text">together</span>
           </motion.h1>
@@ -48,7 +48,7 @@ export default function ContactPage() {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.2 }}
-            className="text-lg md:text-xl text-[var(--theme-text-secondary)]"
+            className="text-base md:text-lg text-[var(--theme-text-secondary)]"
           >
             Get in touch with our engineering leads today. Fill out our form or email us directly.
           </motion.p>

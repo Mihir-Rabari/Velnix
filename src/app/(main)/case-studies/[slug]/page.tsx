@@ -98,10 +98,10 @@ export default function CaseStudyPage() {
   return (
     <div className="pt-24">
       {/* Intro Header */}
-      <SectionWrapper background="primary" padding="lg">
+      <SectionWrapper background="primary" padding="sm">
         <Link
           href="/portfolio"
-          className="inline-flex items-center gap-2 text-sm font-semibold mb-8 text-[var(--brand-primary)] hover:underline"
+          className="inline-flex items-center gap-2 text-sm font-semibold mb-5 text-[var(--brand-primary)] hover:underline"
         >
           <ArrowLeft size={16} /> Back to Portfolio
         </Link>
@@ -122,7 +122,7 @@ export default function CaseStudyPage() {
               <span>Duration: {data.timeline}</span>
             </div>
           </div>
-          <h1 className="text-4xl md:text-5xl lg:text-6xl font-extrabold tracking-tight mb-6">
+          <h1 className="text-3xl md:text-4xl lg:text-5xl font-extrabold tracking-tight mb-4">
             {data.title}
           </h1>
         </div>

@@ -185,6 +185,41 @@ a {
   width: 100%;
 }
 
+.hero-grid {
+  background-image:
+    linear-gradient(to right, color-mix(in srgb, var(--theme-border) 45%, transparent) 1px, transparent 1px),
+    linear-gradient(to bottom, color-mix(in srgb, var(--theme-border) 45%, transparent) 1px, transparent 1px);
+  background-size: 64px 64px;
+  mask-image: linear-gradient(to bottom, black, transparent 88%);
+}
+
+.testimonial-marquee-track {
+  display: flex;
+  width: max-content;
+  animation: testimonial-marquee 34s linear infinite;
+  will-change: transform;
+}
+
+.testimonial-marquee-track-reverse {
+  animation-direction: reverse;
+  animation-duration: 38s;
+}
+
+.testimonial-marquee:hover .testimonial-marquee-track {
+  animation-play-state: paused;
+}
+
+@keyframes testimonial-marquee {
+  from { transform: translateX(0); }
+  to { transform: translateX(-50%); }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .testimonial-marquee-track {
+    animation-play-state: paused;
+  }
+}
+
 /* ========================================================
    Animation Utilities
    ======================================================== */

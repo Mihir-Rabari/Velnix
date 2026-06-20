@@ -38,12 +38,12 @@ export default function AboutPage() {
   return (
     <div className="pt-24">
       {/* Intro */}
-      <SectionWrapper background="primary" padding="xl">
+      <SectionWrapper background="primary" padding="sm">
         <div className="max-w-3xl mx-auto text-center">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
-            className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full mb-6"
+            className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full mb-4"
             style={{
               background: "var(--feature-card-icon-bg)",
               border: "1px solid var(--border-accent)",
@@ -58,7 +58,7 @@ export default function AboutPage() {
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.1 }}
-            className="text-4xl md:text-5xl lg:text-6xl font-extrabold tracking-tight mb-6"
+            className="text-3xl md:text-4xl lg:text-5xl font-extrabold tracking-tight mb-4"
           >
             We are architects of the <span className="gradient-text">digital frontier</span>
           </motion.h1>
@@ -66,7 +66,7 @@ export default function AboutPage() {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.2 }}
-            className="text-lg md:text-xl text-[var(--theme-text-secondary)] leading-relaxed"
+            className="text-base md:text-lg text-[var(--theme-text-secondary)] leading-relaxed"
           >
             Founded in 2018, The Velnix has grown from a boutique agency into a premium global engineering and design partner. We help ambitious startups and established enterprises turn complex challenges into simple, beautiful software.
           </motion.p>

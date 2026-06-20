@@ -68,10 +68,10 @@ export default function BlogPostPage() {
   return (
     <div className="pt-24">
       {/* Article Header */}
-      <SectionWrapper background="primary" padding="lg">
+      <SectionWrapper background="primary" padding="sm">
         <Link
           href="/blog"
-          className="inline-flex items-center gap-2 text-sm font-semibold mb-8 text-[var(--brand-primary)] hover:underline"
+          className="inline-flex items-center gap-2 text-sm font-semibold mb-5 text-[var(--brand-primary)] hover:underline"
         >
           <ArrowLeft size={16} /> Back to Blog
         </Link>
@@ -96,7 +96,7 @@ export default function BlogPostPage() {
               </span>
             </div>
           </div>
-          <h1 className="text-4xl md:text-5xl lg:text-6xl font-extrabold tracking-tight mb-6 leading-tight">
+          <h1 className="text-3xl md:text-4xl lg:text-5xl font-extrabold tracking-tight mb-4 leading-tight">
             {post.title}
           </h1>
           <div className="flex items-center gap-3 mt-6">
